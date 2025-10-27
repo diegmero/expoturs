@@ -146,5 +146,10 @@
         </div>
     </nav>
 
+    <!-- Slider de Imágenes -->
+    <section class="mx-4">
+        @livewire('image-slider')
+    </section>
+
 </div>
 @endsection

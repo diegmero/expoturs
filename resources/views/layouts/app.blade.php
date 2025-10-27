@@ -17,6 +17,9 @@
 <body class="antialiased">
     @yield('content')
     
+    <!-- Footer Global -->
+    @include('components.footer')
+    
     @livewireScripts
 </body>
 </html>
