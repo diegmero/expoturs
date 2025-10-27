@@ -15,6 +15,7 @@
     @livewireStyles
 </head>
 <body class="antialiased">
+    @include('components.global-header')
     @yield('content')
     
     <!-- Footer Global -->

@@ -4,26 +4,7 @@
 <!-- Hero Section -->
 <div class="w-full min-h-screen">
     
-    <!-- Header Turquesa -->
-    <header class="bg-gradient-to-r from-[#4EAAA8] to-[#5AB8B6] py-6 px-8 rounded-t-[2.5rem] mx-4 mt-4 relative">
-        <!-- Selector de Idioma -->
-        <div class="absolute top-6 right-8 bg-white rounded-full px-4 py-2 flex items-center gap-2 shadow-md">
-            <div class="flex items-center gap-1">
-                <img src="https://flagcdn.com/w20/us.png" alt="EN" class="w-5 h-4">
-                <p class="text-sm font-medium text-gray-700">EN</p>
-            </div>
-            <span class="text-gray-400">|</span>
-            <div class="flex items-center gap-1">
-                <img src="https://flagcdn.com/w20/es.png" alt="ESP" class="w-5 h-4">
-                <p class="text-sm font-medium text-gray-700">ESP</p>
-            </div>
-        </div>
-        
-        <!-- Logo Centrado -->
-        <div class="flex justify-center">
-            <img src="URL_DEL_LOGO_EXPOTOUR" alt="ExpoTour Costa Rica" class="h-24">
-        </div>
-    </header>
+    <!-- Header Global provisto por layouts.app -->
 
     <!-- Hero Section con Degradado -->
     <section class="relative mx-4 overflow-hidden" style="background: linear-gradient(90deg, #FF6B35 0%, #FFA07A 25%, #FFD4A3 50%, #B8E0E0 75%, #7EC8E3 100%);">
@@ -118,7 +99,7 @@
             <ul class="flex flex-wrap justify-center gap-4 lg:gap-8">
                 
                 <li>
-                    <a href="#expotour" class="block px-8 py-4 text-[#4A4E69] font-bold text-lg hover:bg-gray-100 rounded-lg transition-colors">
+                    <a href="{{ route('expotur.2026') }}" class="block px-8 py-4 text-[#4A4E69] font-bold text-lg hover:bg-gray-100 rounded-lg transition-colors">
                         EXPOTUR 2026
                     </a>
                 </li>
