@@ -1,61 +1,203 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌴 Expoturs - Costa Rica Travel Mart Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Plataforma web oficial para **ExpoTur Costa Rica 2026**, el evento líder de turismo en Costa Rica.
 
-## About Laravel
+## 📋 Descripción
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Expoturs es una plataforma web moderna construida para conectar compradores y vendedores en el sector turístico de Costa Rica. El sitio web presenta información sobre el evento ExpoTur 2026, incluyendo detalles para expositores, compradores, y patrocinadores.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Stack Tecnológico
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Laravel 12** - Framework PHP moderno
+- **Livewire 3** - Componentes reactivos sin JavaScript complejo
+- **Filament 3** - Panel de administración moderno y potente
+- **TailwindCSS 4** - Framework CSS utility-first
+- **Vite** - Build tool y bundler
+- **MySQL/MariaDB** - Base de datos (producción)
+- **SQLite** - Base de datos (desarrollo)
 
-## Learning Laravel
+## ✨ Características
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+✅ **Un solo proyecto** - Frontend y panel admin integrados  
+✅ **Un solo dominio** - Todo en el mismo dominio (`/` y `/admin`)  
+✅ **Hosting tradicional** - Compatible con cPanel, Plesk, etc.  
+✅ **Responsive** - Diseño adaptable a móviles y desktop  
+✅ **Panel de administración** - Gestión completa con Filament  
+✅ **Componentes reactivos** - Slider de imágenes con Livewire  
+✅ **Diseño moderno** - Sistema de contenedores con bordes redondeados  
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 Instalación
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Requisitos Previos
 
-## Laravel Sponsors
+- PHP 8.2 o superior
+- Composer 2.x
+- Node.js 18+ y NPM
+- MySQL/MariaDB o SQLite
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Pasos de Instalación
 
-### Premium Partners
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/tu-usuario/expoturs.git
+cd expoturs
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+# 2. Instalar dependencias de PHP
+composer install
 
-## Contributing
+# 3. Instalar dependencias de Node.js
+npm install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# 4. Configurar el entorno
+cp .env.example .env
+php artisan key:generate
 
-## Code of Conduct
+# 5. Configurar base de datos en .env
+# Para desarrollo (SQLite):
+DB_CONNECTION=sqlite
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Para producción (MySQL):
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_DATABASE=expoturs
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_password
 
-## Security Vulnerabilities
+# 6. Ejecutar migraciones
+php artisan migrate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# 7. Crear usuario administrador
+php artisan make:filament-user
 
-## License
+# 8. Compilar assets
+npm run build
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 9. Iniciar servidor de desarrollo
+php artisan serve
+```
+
+Accede a:
+- **Frontend**: http://localhost:8000
+- **Panel Admin**: http://localhost:8000/admin
+
+## 📁 Estructura del Proyecto
+
+```
+expoturs/
+├── app/
+│   ├── Filament/              # Panel de administración
+│   ├── Livewire/              # Componentes Livewire
+│   │   └── ImageSlider.php    # Slider de imágenes
+│   ├── Models/                # Modelos Eloquent
+│   └── Providers/
+│       └── Filament/
+│           └── AdminPanelProvider.php
+├── resources/
+│   ├── views/
+│   │   ├── index.blade.php           # Página principal
+│   │   ├── expotur-2026.blade.php    # Página ExpoTur 2026
+│   │   ├── layouts/
+│   │   │   └── app.blade.php         # Layout principal
+│   │   ├── components/
+│   │   │   ├── global-header.blade.php
+│   │   │   └── footer.blade.php
+│   │   └── livewire/
+│   │       └── image-slider.blade.php
+│   └── css/
+│       └── app.css
+├── public/
+│   └── images/               # Imágenes del sitio (crear)
+├── routes/
+│   └── web.php               # Rutas públicas
+└── Docs/                     # Documentación completa
+```
+
+## 📖 Documentación
+
+La documentación completa del proyecto está en la carpeta `/Docs`:
+
+- **00-instalacion-rapida-ubuntu.md** - Instalación rápida del entorno
+- **01-requisitos.md** - Requisitos del sistema
+- **02-instalar-laravel.md** - Instalación de Laravel
+- **03-instalar-filament.md** - Instalación de Filament
+- **04-configuracion-basica.md** - Configuración inicial
+- **05-comandos-utiles.md** - Comandos de desarrollo
+- **06-despliegue-hosting.md** - Guía de despliegue
+
+## 🎨 Sistema de Diseño
+
+El proyecto utiliza un sistema de diseño consistente:
+
+- **Márgenes laterales**: `mx-4` en todas las secciones
+- **Bordes redondeados**: `rounded-[2.5rem]`
+- **Ancho máximo**: `max-w-7xl mx-auto`
+- **Padding responsive**: `px-8 lg:px-16`
+
+### Paleta de Colores
+
+```css
+Turquesa: #4EAAA8, #5AB8B6
+Azul Oscuro: #1E3A5F, #4A4E69
+Naranja: #FF6B35, #FF8C42, #FFA07A
+Amarillo: #FFD4A3
+Celeste: #B8E0E0, #7EC8E3
+```
+
+## 🖼️ Imágenes Pendientes
+
+El proyecto requiere las siguientes imágenes (ver instrucciones en archivos `.md` en la raíz):
+
+- Logo ExpoTur (header)
+- Imagen hero (surfistas)
+- 5 imágenes del slider (aventura, playa, naturaleza, cultura, gastronomía)
+- 3 logos del footer (ACOPROT, William Coleman, Somos Esencial)
+- Imágenes para página ExpoTur 2026
+
+## 🔧 Comandos Útiles
+
+```bash
+# Desarrollo
+php artisan serve              # Iniciar servidor
+npm run dev                    # Compilar assets con hot-reload
+
+# Producción
+npm run build                  # Compilar assets para producción
+php artisan optimize           # Cachear configuración
+
+# Base de datos
+php artisan migrate            # Ejecutar migraciones
+php artisan migrate:fresh      # Refrescar base de datos
+
+# Filament
+php artisan make:filament-user              # Crear usuario admin
+php artisan make:filament-resource Post     # Crear recurso CRUD
+
+# Caché
+php artisan optimize:clear     # Limpiar toda la caché
+php artisan config:cache       # Cachear configuración
+```
+
+## 🚀 Despliegue
+
+Para desplegar en hosting tradicional (cPanel):
+
+1. Subir archivos por FTP/SFTP
+2. Configurar `.env` con datos de producción
+3. Ejecutar `composer install --no-dev`
+4. Ejecutar `php artisan migrate --force`
+5. Configurar document root a `/public`
+6. Configurar permisos: `chmod -R 755 storage bootstrap/cache`
+
+Ver guía completa en `/Docs/06-despliegue-hosting.md`
+
+## 📝 Licencia
+
+Este proyecto es propiedad de **Expoturs Costa Rica**.
+
+## 🤝 Contacto
+
+Para más información sobre ExpoTur Costa Rica 2026, visita [expoturs.com](https://expoturs.com)
+
+---
+
+**ExpoTur 2026** - Where Opportunities Become Business! 🌴
