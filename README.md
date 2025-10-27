@@ -60,8 +60,8 @@ DB_CONNECTION=sqlite
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_DATABASE=expoturs
-DB_USERNAME=tu_usuario
-DB_PASSWORD=tu_password
+DB_USERNAME=usuario
+DB_PASSWORD=contraseña
 
 # 6. Ejecutar migraciones
 php artisan migrate
