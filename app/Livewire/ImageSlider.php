@@ -9,32 +9,10 @@ class ImageSlider extends Component
     public $currentSlide = 0;
     
     public $slides = [
-        [
-            'image' => 'URL_IMAGEN_AVENTURA',
-            'title' => 'AVENTURA | ADVENTURE'
-        ],
-        [
-            'image' => 'URL_IMAGEN_PLAYA',
-            'title' => 'PLAYA | BEACH'
-        ],
-        [
-            'image' => 'URL_IMAGEN_NATURALEZA',
-            'title' => 'NATURALEZA | NATURE'
-        ],
-        [
-            'image' => 'URL_IMAGEN_CULTURA',
-            'title' => 'CULTURA | CULTURE'
-        ],
-        [
-            'image' => 'URL_IMAGEN_GASTRONOMIA',
-            'title' => 'GASTRONOMÍA | GASTRONOMY'
-        ],
+        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_Beabuyer_gzh5xg.webp',
+        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_Expotur_kgtuzw.webp',
+        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_SellersInfo_r48bxw.webp',
     ];
-
-    public function mount()
-    {
-        $this->currentSlide = 0;
-    }
 
     public function nextSlide()
     {
@@ -44,11 +22,6 @@ class ImageSlider extends Component
     public function previousSlide()
     {
         $this->currentSlide = ($this->currentSlide - 1 + count($this->slides)) % count($this->slides);
-    }
-
-    public function goToSlide($index)
-    {
-        $this->currentSlide = $index;
     }
 
     public function render()
