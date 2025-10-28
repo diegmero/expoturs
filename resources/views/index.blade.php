@@ -7,61 +7,11 @@
     <!-- Header Global provisto por layouts.app -->
 
     <!-- Hero Section con Degradado -->
-    <section class="relative mx-4 overflow-hidden" style="background: linear-gradient(90deg, #FF6B35 0%, #FFA07A 25%, #FFD4A3 50%, #B8E0E0 75%, #7EC8E3 100%);">
+    <section class="mx-4 overflow-hidden" style="background: linear-gradient(90deg, #FF6B35 0%, #FFA07A 25%, #FFD4A3 50%, #B8E0E0 75%, #7EC8E3 100%);">
         
         <!-- Imagen de Fondo -->
-        <div class="absolute inset-0 z-0">
-            <img src="URL_IMAGEN_SURFISTAS" alt="Pura Vida" class="w-full h-full object-cover opacity-90">
-        </div>
-        
-        <!-- Contenido del Hero -->
-        <div class="relative z-10 py-16 px-8 lg:px-16">
-            <div class="max-w-7xl mx-auto">
-                
-                <!-- Texto Principal -->
-                <div class="mb-8">
-                    <h1 class="text-white font-extrabold text-5xl lg:text-7xl leading-tight mb-2">
-                        WHERE <span class="font-black">OPPORTUNITIES</span><br>
-                        BECOME <span class="font-black">BUSINESS!</span>
-                    </h1>
-                    
-                    <!-- Pura Vida en cursiva -->
-                    <h2 class="text-white font-bold italic text-6xl lg:text-8xl mt-4" style="font-family: 'Brush Script MT', cursive;">
-                        Pura Vida
-                    </h2>
-                </div>
-                
-                <!-- Iconos con Texto -->
-                <div class="flex flex-wrap gap-6 items-center text-white">
-                    <!-- Trayectoria -->
-                    <div class="flex items-center gap-2">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <circle cx="12" cy="12" r="3" fill="currentColor"/>
-                        </svg>
-                        <span class="text-lg font-medium">Trayectoria</span>
-                    </div>
-                    
-                    <!-- Innovación -->
-                    <div class="flex items-center gap-2">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <span class="text-lg font-medium">Innovación</span>
-                    </div>
-                    
-                    <!-- Comercialización -->
-                    <div class="flex items-center gap-2">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <span class="text-lg font-medium">Comercialización</span>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="w-full">
+            <img src="{{ asset('img/WEB/header_Home.webp') }}" alt="Pura Vida" class="w-full h-auto object-contain">
         </div>
         
         <!-- Barra Inferior Morada con Info -->

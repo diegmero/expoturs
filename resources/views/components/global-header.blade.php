@@ -11,6 +11,6 @@
         </div>
     </div>
     <div class="flex justify-center">
-        <img src="URL_DEL_LOGO_EXPOTOUR" alt="ExpoTour Costa Rica" class="h-24">
+        <img src="{{ asset('img/PNG/logo_Expotur.png') }}" alt="ExpoTour Costa Rica" class="h-24">
     </div>
 </header>

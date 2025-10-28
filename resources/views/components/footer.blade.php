@@ -13,7 +13,7 @@
                     <div class="text-center md:pr-8">
                         <p class="text-[#1E3A5F] font-bold text-sm mb-4 tracking-wider">ORGANIZED BY</p>
                         <div class="flex justify-center">
-                            <img src="URL_LOGO_ACOPROT" alt="ACOPROT" class="h-24 object-contain">
+                            <img src="{{ asset('img/SVG/LogoAcoprot.svg') }}" alt="ACOPROT" class="h-24 object-contain">
                         </div>
                     </div>
                     
@@ -21,14 +21,14 @@
                     <div class="text-center md:border-l md:border-r border-gray-300 md:px-8">
                         <p class="text-[#1E3A5F] font-bold text-sm mb-4 tracking-wider">STRATEGIC SUPPORT</p>
                         <div class="flex justify-center">
-                            <img src="URL_LOGO_WILLIAM_COLEMAN" alt="William H. Coleman, Inc." class="h-16 object-contain">
+                            <img src="{{ asset('img/SVG/logoWilliam.svg') }}" alt="William H. Coleman, Inc." class="h-16 object-contain">
                         </div>
                     </div>
                     
                     <!-- Columna 3: Logo Somos Esencial Costa Rica -->
                     <div class="text-center md:pl-8">
                         <div class="flex justify-center">
-                            <img src="URL_LOGO_SOMOS_ESENCIAL" alt="Somos Esencial Costa Rica" class="h-24 object-contain">
+                            <img src="{{ asset('img/SVG/LogoCostaRica.svg') }}" alt="Somos Esencial Costa Rica" class="h-24 object-contain">
                         </div>
                     </div>
                     
