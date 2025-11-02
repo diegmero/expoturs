@@ -9,9 +9,10 @@ class ImageSlider extends Component
     public $currentSlide = 0;
     
     public $slides = [
-        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_Beabuyer_gzh5xg.webp',
-        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_Expotur_kgtuzw.webp',
-        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_SellersInfo_r48bxw.webp',
+        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109290/Web_Site-Expotur2026_20251030-05_p5i16a.jpg',
+        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109290/Web_Site-Expotur2026_20251030-11_rdsqzy.jpg',
+        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109290/Web_Site-Expotur2026_20251030-08_ffrb2e.jpg',
+        'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109290/Web_Site-Expotur2026_20251030-07_fcmjpl.jpg',
     ];
 
     public function nextSlide()

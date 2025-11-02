@@ -1,10 +1,19 @@
-<div class="relative w-full rounded-[2.5rem] overflow-hidden shadow-lg" wire:poll.5s="nextSlide">
+<div class="relative w-full overflow-hidden shadow-lg" wire:poll.5s="nextSlide">
     <!-- Slider Container -->
     <div class="relative h-[500px] lg:h-[600px] overflow-hidden">
         
         @foreach($slides as $index => $imageUrl)
         <div class="absolute inset-0 transition-opacity duration-1000 {{ $currentSlide === $index ? 'opacity-100' : 'opacity-0' }}">
             <img src="{{ $imageUrl }}" alt="Slide {{ $index + 1 }}" class="w-full h-full object-cover">
+            
+            <!-- Overlay con texto centrado -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h2 class="text-4xl lg:text-6xl font-normal tracking-wider">
+                        AVENTURA <span class="text-3xl lg:text-5xl font-light mx-4">|</span> ADVENTURE
+                    </h2>
+                </div>
+            </div>
         </div>
         @endforeach
         
@@ -38,11 +47,10 @@
     </div>
     
     <!-- Barra Azul Inferior -->
-    <div class="bg-[#1E3A5F] py-8 px-8 lg:px-16">
+    <div class="bg-[#08254f] py-8 px-8 lg:px-16">
         <div class="max-w-7xl mx-auto text-center">
-            <h3 class="text-4xl lg:text-5xl font-bold">
-                <span class="text-[#5AB8B6]">¡PURA VIDA!</span>
-                <span class="text-white"> ¡PUROS NEGOCIOS!</span>
+            <h3 class="text-4xl lg:text-5xl font-bold text-white">
+                ¡PURA VIDA...PUROS NEGOCIOS!
             </h3>
         </div>
     </div>

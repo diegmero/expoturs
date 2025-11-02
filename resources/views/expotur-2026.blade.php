@@ -5,17 +5,14 @@
 <div class="w-full min-h-screen">
     <!-- Header Global provisto por layouts.app -->
 
-    <!-- Sección Hero: Costa Rica Travel Mart -->
-    <section class="mx-4">
-        <div class="relative h-[400px] lg:h-[500px] rounded-b-[2.5rem] overflow-hidden shadow-lg">
-            
-            <!-- Imagen de Fondo -->
-            <img src="https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_Beabuyer_gzh5xg.webp" 
-                 alt="Costa Rica Travel Mart" 
-                 class="absolute inset-0 w-full h-full object-cover">
-            
-        </div>
-    </section>
+    <!-- Hero con Navegación Flotante -->
+    @include('components.hero-navigation', [
+        'heroImage' => 'https://res.cloudinary.com/dspoaxmvn/image/upload/v1761612387/header_Beabuyer_gzh5xg.webp',
+        'heroTitle' => '',
+        'heroSubtitle' => '',
+        'showEventInfo' => false,
+        'activeTab' => 'expotur'
+    ])
 
     <!-- Sección General Information -->
     <section class="mt-16 mb-16">

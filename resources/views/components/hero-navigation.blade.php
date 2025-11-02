@@ -1,0 +1,112 @@
+{{-- 
+    Componente Hero con Navegación Flotante
+    Parámetros:
+    - $heroImage: Ruta de la imagen hero
+    - $heroTitle: Título principal (opcional)
+    - $heroSubtitle: Subtítulo (opcional)
+    - $showEventInfo: Mostrar información del evento (fecha/lugar) - default: true
+    - $activeTab: Pestaña activa ('expotur', 'sellers', 'buyer', 'contact') - default: 'buyer'
+--}}
+
+@props([
+    'heroImage' => 'img/WEB/header_Home.webp',
+    'heroTitle' => 'WHERE OPPORTUNITIES BECOME BUSINESS!',
+    'heroSubtitle' => 'Pura Vida',
+    'showEventInfo' => true,
+    'activeTab' => 'buyer'
+])
+
+<div class="relative w-full">
+    <!-- Hero Section con imagen de fondo -->
+    <section class="mx-4 overflow-hidden relative" 
+             style="background: linear-gradient(90deg, #FF6B35 0%, #FFA07A 25%, #FFD4A3 50%, #B8E0E0 75%, #7EC8E3 100%);">
+        
+        <!-- Imagen Hero -->
+        <div class="w-full">
+            <img src="{{ asset($heroImage) }}" alt="{{ $heroTitle }}" class="w-full h-auto object-cover">
+        </div>
+        
+        <!-- Información del evento (fecha y lugar) -->
+        @if($showEventInfo)
+        <div class="bg-[#08254f] pt-5 pb-25 px-8 lg:px-16">
+            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-white">
+                
+                <!-- Fecha -->
+                <div class="flex items-center gap-3">
+                    <svg class="w-10 h-10 text-[#5AB8B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
+                    </svg>
+                    <span class="text-2xl font-light tracking-wide">MAY 27-29, 2026</span>
+                </div>
+                
+                <!-- Ubicación -->
+                <div class="flex items-center gap-3">
+                    <svg class="w-10 h-10 text-[#5AB8B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="3" stroke-width="2"/>
+                    </svg>
+                    <span class="text-2xl font-light tracking-wide">CROWNE PLAZA SAN JOSÉ LA SABANA HOTEL</span>
+                </div>
+                
+            </div>
+        </div>
+        @endif
+        
+    </section>
+
+<!-- Menú de Navegación Flotante -->
+<div class="relative -mt-12 mx-4 lg:mx-16 z-10 mb-20">
+    <!-- Contenedor principal del menú con sombra - altura fija -->
+    <div class="bg-gradient-to-b from-white to-gray-100 rounded-[1rem] shadow-2xl h-24 overflow-visible">
+        <!-- Grid de navegación con gap -->
+        <div class="grid grid-cols-4 gap-1 relative h-full p-1">
+            
+            <!-- EXPOTUR 2026 -->
+            <div class="flex items-center justify-center relative h-full">
+                <a href="{{ route('expotur.2026') }}" 
+                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#3f51b5] font-bold transition-all duration-300 ease-out text-center rounded-2xl
+                          {{ $activeTab === 'expotur' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2">EXPOTUR 2026</span>
+                </a>
+            </div>
+            
+            <!-- SELLERS INFO -->
+            <div class="flex items-center justify-center relative h-full">
+                <!-- Separador vertical izquierdo -->
+                <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-px h-8 bg-gray-300 z-0"></div>
+                
+                <a href="#sellers" 
+                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#3f51b5] font-bold transition-all duration-300 ease-out text-center rounded-2xl
+                          {{ $activeTab === 'sellers' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2">SELLERS INFO</span>
+                </a>
+            </div>
+            
+            <!-- BE A BUYER -->
+            <div class="flex items-center justify-center relative h-full">
+                <a href="#buyer" 
+                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#3f51b5] font-bold transition-all duration-300 ease-out text-center rounded-2xl
+                          {{ $activeTab === 'buyer' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2 transition-all duration-300 hover:scale-105 hover:text-xl active:scale-105 active:text-xl">BE A BUYER</span>
+                </a>
+            </div>
+            
+            <!-- CONTACT US -->
+            <div class="flex items-center justify-center relative h-full">
+                <!-- Separador vertical izquierdo -->
+                <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-px h-8 bg-gray-300 z-0"></div>
+                
+                <a href="#contact" 
+                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#3f51b5] font-bold transition-all duration-300 ease-out text-center rounded-2xl
+                          {{ $activeTab === 'contact' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2">CONTACT US</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
