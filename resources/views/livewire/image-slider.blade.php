@@ -2,15 +2,19 @@
     <!-- Slider Container -->
     <div class="relative h-[500px] lg:h-[600px] overflow-hidden">
         
-        @foreach($slides as $index => $imageUrl)
+        @foreach($slides as $index => $slide)
         <div class="absolute inset-0 transition-opacity duration-1000 {{ $currentSlide === $index ? 'opacity-100' : 'opacity-0' }}">
-            <img src="{{ $imageUrl }}" alt="Slide {{ $index + 1 }}" class="w-full h-full object-cover">
+            @if($slide['image'])
+                <img src="{{ $slide['image'] }}" alt="{{ $slide['text_es'] }}" class="w-full h-full object-cover">
+            @else
+                <div class="w-full h-full bg-gradient-to-br from-teal-500 to-blue-600"></div>
+            @endif
             
             <!-- Overlay con texto centrado -->
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center text-white">
-                    <h2 class="text-4xl lg:text-6xl font-normal tracking-wider">
-                        AVENTURA <span class="text-3xl lg:text-5xl font-light mx-4">|</span> ADVENTURE
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+                <div class="text-center text-white px-4">
+                    <h2 class="text-4xl lg:text-6xl font-normal tracking-wider uppercase">
+                        {{ $slide['text_es'] }} <span class="text-3xl lg:text-5xl font-light mx-4">|</span> {{ $slide['text_en'] }}
                     </h2>
                 </div>
             </div>
