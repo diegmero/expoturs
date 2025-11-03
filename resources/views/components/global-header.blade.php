@@ -15,6 +15,8 @@
 
 <header class="bg-gradient-to-r from-[#4EAAA8] to-[#5AB8B6] py-6 px-8 rounded-t-[2.5rem] mx-4 mt-4 relative mb-1">
     <div class="flex justify-center">
-        <img src="{{ asset('img/PNG/logo_Expotur.png') }}" alt="ExpoTour Costa Rica" class="h-24">
+        <a href="{{ route('home') }}" class="cursor-pointer hover:opacity-90 transition-opacity duration-200">
+            <img src="{{ asset('img/PNG/logo_Expotur.png') }}" alt="ExpoTour Costa Rica" class="h-24">
+        </a>
     </div>
 </header>
