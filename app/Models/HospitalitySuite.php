@@ -14,13 +14,11 @@ class HospitalitySuite extends Model
         'is_reserved',
         'company_name',
         'person_name',
-        'reservation_date',
         'entry_date',
     ];
 
     protected $casts = [
         'is_reserved' => 'boolean',
-        'reservation_date' => 'date',
         'entry_date' => 'date',
     ];
 

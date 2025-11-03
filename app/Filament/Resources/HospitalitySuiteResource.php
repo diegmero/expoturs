@@ -54,10 +54,6 @@ class HospitalitySuiteResource extends Resource
                             ->maxLength(255)
                             ->visible(fn (Forms\Get $get) => $get('is_reserved')),
                             
-                        Forms\Components\DatePicker::make('reservation_date')
-                            ->label('Fecha de Reserva')
-                            ->visible(fn (Forms\Get $get) => $get('is_reserved')),
-                            
                         Forms\Components\DatePicker::make('entry_date')
                             ->label('Fecha de Ingreso a la Suite')
                             ->visible(fn (Forms\Get $get) => $get('is_reserved')),
@@ -92,11 +88,6 @@ class HospitalitySuiteResource extends Resource
                     ->label('Persona')
                     ->searchable()
                     ->placeholder('No asignada'),
-                    
-                Tables\Columns\TextColumn::make('reservation_date')
-                    ->label('Fecha Reserva')
-                    ->date()
-                    ->placeholder('No definida'),
                     
                 Tables\Columns\TextColumn::make('entry_date')
                     ->label('Fecha Ingreso')

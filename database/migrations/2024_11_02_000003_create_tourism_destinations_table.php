@@ -14,7 +14,6 @@ return new class extends Migration
             $table->boolean('is_reserved')->default(false);
             $table->string('company_name')->nullable();
             $table->string('person_name')->nullable();
-            $table->date('reservation_date')->nullable();
             $table->date('entry_date')->nullable();
             $table->timestamps();
         });
