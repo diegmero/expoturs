@@ -67,9 +67,9 @@
             <!-- EXPOTUR 2026 -->
             <div class="flex items-center justify-center relative h-full">
                 <a href="{{ route('expotur.2026') }}" 
-                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl
-                          {{ $activeTab === 'expotur' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-2">EXPOTUR 2026</span>
+                class="group absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-lg lg:text-xl
+                        {{ $activeTab === 'expotur' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2 inline-block {{ $activeTab === 'expotur' ? 'scale-y-[0.625]' : 'group-hover:scale-y-[0.625]' }}">EXPOTUR 2026</span>
                 </a>
             </div>
             
@@ -79,18 +79,18 @@
                 <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-px h-8 bg-gray-300 z-0"></div>
                 
                 <a href="{{ route('sellers.info') }}" 
-                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl
-                          {{ $activeTab === 'sellers' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-2">SELLERS INFO</span>
+                   class="group absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-lg lg:text-xl
+                          {{ $activeTab === 'sellers' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2 inline-block transition-transform duration-300 {{ $activeTab === 'sellers' ? 'scale-y-[0.625]' : 'group-hover:scale-y-[0.625]' }}">SELLERS INFO</span>
                 </a>
             </div>
             
             <!-- BE A BUYER -->
             <div class="flex items-center justify-center relative h-full">
                 <a href="{{ route('buyer') }}" 
-                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl
-                          {{ $activeTab === 'buyer' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-2 transition-all duration-300 hover:scale-105 hover:text-xl active:scale-105 active:text-xl">BE A BUYER</span>
+                   class="group absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-lg lg:text-xl
+                          {{ $activeTab === 'buyer' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2 inline-block transition-transform duration-300 {{ $activeTab === 'buyer' ? 'scale-y-[0.625]' : 'group-hover:scale-y-[0.625]' }}">BE A BUYER</span>
                 </a>
             </div>
             
@@ -99,10 +99,11 @@
                 <!-- Separador vertical izquierdo -->
                 <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-px h-8 bg-gray-300 z-0"></div>
                 
-                <a href="{{ route('contact') }}" 
-                   class="absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl
-                          {{ $activeTab === 'contact' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] text-xl lg:text-2xl origin-center z-30' : 'text-lg lg:text-xl hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:text-xl hover:lg:text-2xl hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-2">CONTACT US</span>
+                <a href="#footer" 
+                   onclick="event.preventDefault(); document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });"
+                   class="group absolute inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-lg lg:text-xl
+                          {{ $activeTab === 'contact' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
+                    <span class="px-2 inline-block transition-transform duration-300 {{ $activeTab === 'contact' ? 'scale-y-[0.625]' : 'group-hover:scale-y-[0.625]' }}">CONTACT US</span>
                 </a>
             </div>
             

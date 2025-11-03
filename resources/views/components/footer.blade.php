@@ -1,5 +1,5 @@
 <!-- Footer Global -->
-<footer class="mx-4 mt-16 mb-4">
+<footer id="footer" class="mx-4 mt-16 mb-4">
     <div class="bg-white rounded-[2.5rem] shadow-lg overflow-hidden">
         
         <!-- Sección Superior - Logos -->
@@ -51,7 +51,7 @@
                         <p class="text-white text-lg lg:text-xl font-medium">
                             Contact us | 
                             <a href="mailto:info@expotur.com" class="hover:text-blue-300 transition-colors">info@expotur.com</a> | 
-                            <a href="tel:+50670182132" class="hover:text-blue-300 transition-colors">+506 7018-2132</a>
+                            <a href="https://wa.me/50670182132" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors">+506 7018-2132</a>
                         </p>
                     </div>
                     

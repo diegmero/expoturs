@@ -11,7 +11,7 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-bold text-teal-900">¡Bienvenido!</h3>
-                    <p class="text-teal-700">Panel de administración de Expoturs 2026</p>
+                    <p class="text-teal-700">Panel de administración de Expotur 2026</p>
                 </div>
             </div>
         </div>
