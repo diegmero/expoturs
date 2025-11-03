@@ -266,11 +266,16 @@
                     </p>
                     
                     <!-- Barra azul final de sección -->
-                    <div class="bg-[#08254f] py-6 px-8 text-center">
+                    <div class="bg-[#08254f] py-6 px-8 text-center mb-12">
                         <h4 class="text-white text-2xl lg:text-3xl font-bold">
                             PLANOS DE DISTRIBUCIÓN Y DISPONIBILIDAD DE ESPACIOS
                         </h4>
                     </div>
+                </div>
+                
+                <!-- Mapa de Hospitality Suites -->
+                <div class="mb-16">
+                    @livewire('hospitality-suites-map')
                 </div>
                 
             </div>
