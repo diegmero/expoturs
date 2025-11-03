@@ -278,6 +278,11 @@
                     @livewire('hospitality-suites-map')
                 </div>
                 
+                <!-- Mapa de Mesas de Negociación -->
+                <div class="mb-16">
+                    @livewire('negotiation-tables-map')
+                </div>
+                
             </div>
         </div>
     </section>

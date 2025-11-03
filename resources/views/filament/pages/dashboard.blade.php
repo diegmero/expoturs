@@ -37,6 +37,28 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Tarjeta de Mesas de Negociación -->
+        <div class="flex-1 bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+            <div class="flex items-center gap-4">
+                <div class="bg-green-500 p-3 rounded-full">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-green-900">Mesas de Negociación</h3>
+                    <p class="text-green-700">Gestiona las reservas de las 112 mesas disponibles</p>
+                    <a href="{{ route('filament.admin.resources.negotiation-tables.index') }}" 
+                       class="inline-flex items-center mt-2 text-sm font-medium text-green-600 hover:text-green-800">
+                        Ver reservas
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -44,11 +66,15 @@
     <div class="mt-8">
         <h3 class="text-lg font-semibold text-gray-900 mb-4">Estadísticas Rápidas</h3>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
             @php
                 $totalSuites = \App\Models\HospitalitySuite::count();
                 $reservedSuites = \App\Models\HospitalitySuite::where('is_reserved', true)->count();
                 $availableSuites = $totalSuites - $reservedSuites;
+                
+                $totalTables = \App\Models\NegotiationTable::count();
+                $reservedTables = \App\Models\NegotiationTable::where('is_reserved', true)->count();
+                $availableTables = $totalTables - $reservedTables;
             @endphp
             
             <!-- Total Suites -->
@@ -87,6 +113,51 @@
                     <div>
                         <p class="text-sm font-medium text-white">Disponibles</p>
                         <p class="text-3xl font-bold text-white">{{ $availableSuites }}</p>
+                    </div>
+                    <div class="bg-black p-2 rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Mesas -->
+            <div class="bg-black rounded-lg p-4 border border-gray-200 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-white">Total Mesas</p>
+                        <p class="text-3xl font-bold text-white">{{ $totalTables }}</p>
+                    </div>
+                    <div class="bg-black p-2 rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mesas Reservadas -->
+            <div class="bg-black rounded-lg p-4 border border-gray-200 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-white">Mesas Reservadas</p>
+                        <p class="text-3xl font-bold text-white">{{ $reservedTables }}</p>
+                    </div>
+                    <div class="bg-black p-2 rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mesas Disponibles -->
+            <div class="bg-black rounded-lg p-4 border border-gray-200 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-white">Mesas Disponibles</p>
+                        <p class="text-3xl font-bold text-white">{{ $availableTables }}</p>
                     </div>
                     <div class="bg-black p-2 rounded-full">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
