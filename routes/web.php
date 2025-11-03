@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 })->name('home');
 
 Route::get('/expotur-2026', function () {
@@ -15,7 +15,7 @@ Route::get('/sellers-info', function () {
 })->name('sellers.info');
 
 Route::get('/be-a-buyer', function () {
-    return view('index');
+    return view('be-a-buyer');
 })->name('buyer');
 
 Route::get('/contact-us', function () {

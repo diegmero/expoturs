@@ -15,7 +15,7 @@
     ])
 
     <!-- Sección Información General -->
-    <section class="mt-16 mx-4 lg:mx-16">
+    <section class="mt-16 mx-4 lg:mx-16">|
         <div class="bg-white rounded-[2.5rem] px-8 lg:px-16">
             <div class="max-w-7xl mx-auto">
                 
@@ -25,7 +25,7 @@
                         Información General
                     </h2>
                     <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-lg">
-                        RESERVATION FORM
+                        <a href="https://registro.aplicacionesincontacto.com/#/formview/68ff964010f8f1627c1c30f4" target="_blank">RESERVATION FORM</a>
                     </button>
                 </div>
                 
@@ -281,6 +281,72 @@
                 <!-- Mapa de Mesas de Negociación -->
                 <div class="mb-16">
                     @livewire('negotiation-tables-map')
+                </div>
+                
+                <!-- Mapa de Destinos & Cámaras de Turismo -->
+                <div class="mb-16">
+                    @livewire('tourism-destinations-map')
+                </div>
+                
+                <!-- Características de los espacios -->
+                <div class="">
+                    <div class="max-w-5xl mx-auto">
+                        <!-- Línea superior -->
+                        <div class="border-t-2 border-[#045e7c] mb-8"></div>
+                        
+                        <!-- Título -->
+                        <h3 class="text-[#045e7c] text-2xl font-bold mb-8">
+                            Características de los espacios
+                        </h3>
+                        
+                        <!-- Tabla de características -->
+                        <div class="space-y-6">
+                            
+                            <!-- Mesa de negociación -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6 border-b border-gray-300">
+                                <div class="md:col-span-1">
+                                    <h4 class="text-gray-700 font-semibold text-lg">Mesa de negociación</h4>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <p class="text-gray-700 text-base leading-relaxed text-justify">
+                                        Incluye participación de 2 delegados, programa de citas, mobiliario básico (mesa y cuatro sillas), rotulación de mesa, material y alimentación detallada en el programa.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Hospitality Suite -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6 border-b border-gray-300">
+                                <div class="md:col-span-1">
+                                    <h4 class="text-gray-700 font-semibold text-lg">Hospitality Suite</h4>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <p class="text-gray-700 text-base leading-relaxed text-justify">
+                                        Suite para la atención personalizada de compradores de 33m² incluye participación de 2 delegados de la empresa vendedora, programa de citas, rotulación de puerta, mobiliario con mesa tablero, mantelería y 4 sillas, pantalla de 42 pulgadas, mini salita lounge de mesa redonda y 1 sillón, y dos mesas de apoyo para material promocional, baño privado, material y alimentación detallada en el programa.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Cámaras y asociaciones sectoriales -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6">
+                                <div class="md:col-span-1">
+                                    <h4 class="text-gray-700 font-semibold text-lg">Cámaras y asociaciones sectoriales</h4>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <p class="text-gray-700 text-base leading-relaxed text-justify">
+                                        Incluye participación de 2 delegados, programa de citas, mobiliario básico (mesa y cuatro sillas), rotulación de mesa, material y alimentación detallada en el programa. Ubicación salón Góndola.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Botón de reservación -->
+                        <div class="flex justify-center mt-12">
+                            <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-lg">
+                        <a href="https://registro.aplicacionesincontacto.com/#/formview/68ff964010f8f1627c1c30f4" target="_blank">RESERVATION FORM</a>
+                    </button>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
