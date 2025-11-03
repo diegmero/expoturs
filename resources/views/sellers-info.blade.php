@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Página ExpoTur 2026 -->
+<!-- Página Sellers Info -->
 <div class="w-full min-h-screen">
     <!-- Header Global provisto por layouts.app -->
 
     <!-- Hero con Navegación Flotante -->
     @include('components.hero-navigation', [
-        'heroImage' => 'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109289/header_Expotur_zwgumw.webp',
+        'heroImage' => 'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109289/header_SellersInfo_wumuaj.webp',
         'heroTitle' => '',
         'heroSubtitle' => '',
         'showEventInfo' => false,
-        'activeTab' => 'expotur'
+        'activeTab' => 'sellers'
     ])
 
     <!-- Sección Información General -->
     <section class="mt-16 mx-4 lg:mx-16">
-        <div class="bg-white rounded-[2.5rem]  px-8 lg:px-16">
+        <div class="bg-white rounded-[2.5rem] px-8 lg:px-16">
             <div class="max-w-7xl mx-auto">
                 
                 <!-- Header con título y botón -->
@@ -25,7 +25,7 @@
                         Información General
                     </h2>
                     <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-lg">
-                        DESCARGAR FICHA TÉCNICA
+                        RESERVATION FORM
                     </button>
                 </div>
                 
@@ -172,7 +172,6 @@
                 
                 <!-- Línea separadora -->
                 <div class="w-full h-[3px] bg-[#045e7c] mb-8"></div>
-                
                 <!-- Trayectoria - Innovación - Comercialización -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-2xl lg:text-3xl font-bold mb-6">
@@ -183,12 +182,97 @@
                     </p>
                 </div>
                 
-                <!-- Botón centrado -->
-                <div class="text-center">
-                    <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-12 rounded-full text-xl transition-all shadow-lg">
-                        DESCARGAR FICHA TÉCNICA
-                    </button>
+                <!-- Categorías de participación -->
+                <div class="mb-16">
+                    <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
+                        Categorías de participación
+                    </h3>
+                    <p class="text-gray-700 text-lg mb-12">
+                        <span class="font-semibold">Expotur 2026</span> ofrece 3 categorías de participación, garantizando en ambas un programa de citas detallado.
+                    </p>
+                    
+                    <!-- Grid de Tarjetas de Precios -->
+                    <div class="flex flex-col lg:flex-row justify-center gap-8 mb-8">
+                        
+                        <!-- Tarjeta 1: Tarifas de pronto pago -->
+                        <div class="bg-gradient-to-b from-[#08254f] to-[#0baabf] rounded-3xl p-3 shadow-lg w-full max-w-sm">
+                            <div class="bg-white rounded-3xl h-full pb-6">
+                                <!-- Header de la tarjeta -->
+                                <div class="bg-[#08254f] text-white text-center py-4 px-6 mb-6">
+                                    <h4 class="font-bold text-lg">Tarifas de pronto pago</h4>
+                                    <p class="text-sm">(hasta el 31 de diciembre 2025)</p>
+                                </div>
+                                
+                                <!-- Mesa de negociación -->
+                                <div class="text-center mb-6 pb-6 border-b border-gray-200">
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Mesa de negociación</h5>
+                                    <p class="text-2xl font-bold text-gray-700">USD 1,700 + IVA</p>
+                                    <p class="text-gray-600">Mil setecientos dólares</p>
+                                </div>
+                                
+                                <!-- Hospitality suite -->
+                                <div class="text-center mb-6 pb-6 border-b border-gray-200">
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Hospitality suite</h5>
+                                    <p class="text-2xl font-bold text-gray-700">USD 4,000 + IVA</p>
+                                    <p class="text-gray-600">Cuatro mil dólares</p>
+                                </div>
+                                
+                                <!-- Cámaras y asociaciones -->
+                                <div class="text-center">
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Cámaras y asociaciones</h5>
+                                    <p class="text-2xl font-bold text-gray-700">USD 500 + IVA</p>
+                                    <p class="text-gray-600">Quinientos dólares</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tarjeta 2: Tarifas a partir del 01 de enero 2025 -->
+                        <div class="bg-gradient-to-b from-[#08254f] to-[#0baabf] rounded-3xl p-3 shadow-lg w-full max-w-sm">
+                            <div class="bg-white rounded-3xl h-full">
+                                <!-- Header de la tarjeta -->
+                                <div class="bg-[#08254f] text-white text-center py-4 px-6 mb-6">
+                                    <h4 class="font-bold text-lg">Tarifas a partir del</h4>
+                                    <p class="text-sm">01 de enero 2025</p>
+                                </div>
+                                
+                                <!-- Mesa de negociación -->
+                                <div class="text-center mb-6 pb-6 border-b border-gray-200">
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Mesa de negociación</h5>
+                                    <p class="text-2xl font-bold text-gray-700">USD 1,900 + IVA</p>
+                                    <p class="text-gray-600">Mil novecientos dólares</p>
+                                </div>
+                                
+                                <!-- Hospitality suite -->
+                                <div class="text-center mb-6 pb-6 border-b border-gray-200">
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Hospitality suite</h5>
+                                    <p class="text-2xl font-bold text-gray-700">USD 4,500 + IVA</p>
+                                    <p class="text-gray-600">Cuatro mil quinientos dólares</p>
+                                </div>
+                                
+                                <!-- Cámaras y asociaciones -->
+                                <div class="text-center">
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Cámaras y asociaciones</h5>
+                                    <p class="text-2xl font-bold text-gray-700">USD 500 + IVA</p>
+                                    <p class="text-gray-600">Quinientos dólares</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Nota al pie -->
+                    <p class="text-center text-gray-600 text-sm mb-8">
+                        (*) Confirmación sujeta a aprobación de la Comisión Organizadora
+                    </p>
+                    
+                    <!-- Barra azul final de sección -->
+                    <div class="bg-[#08254f] py-6 px-8 text-center">
+                        <h4 class="text-white text-2xl lg:text-3xl font-bold">
+                            PLANOS DE DISTRIBUCIÓN Y DISPONIBILIDAD DE ESPACIOS
+                        </h4>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </section>
