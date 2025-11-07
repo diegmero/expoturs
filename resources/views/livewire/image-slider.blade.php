@@ -13,8 +13,8 @@
             <!-- Overlay con texto centrado -->
             <div class="absolute inset-0 flex items-center justify-center bg-black/20">
                 <div class="text-center text-white px-4">
-                    <h2 class="text-4xl lg:text-6xl font-normal tracking-wider uppercase">
-                        {{ $slide['text_es'] }} <span class="text-3xl lg:text-5xl font-light mx-4">|</span> {{ $slide['text_en'] }}
+                    <h2 class="text-4xl lg:text-4xl font-normal tracking-wider uppercase">
+                        {{ $slide['text_es'] }} <span class="text-3xl lg:text-4xl font-light mx-4">|</span> {{ $slide['text_en'] }}
                     </h2>
                 </div>
             </div>
