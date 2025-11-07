@@ -16,7 +16,7 @@
     ])
 
     <!-- Slider de Imágenes -->
-    <section class="mx-4">
+    <section class="mx-2 sm:mx-4">
         @livewire('image-slider')
     </section>
 
