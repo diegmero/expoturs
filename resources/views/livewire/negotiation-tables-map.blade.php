@@ -6,233 +6,183 @@
         </h3>
     </div>
 
-    <!-- Contenedor del plano -->
+    <!-- SVG del plano -->
     <div class="max-w-6xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-        
-        <!-- Estructura del plano completo -->
-        <div class="relative bg-gray-100 rounded-lg p-6">
+        <div class="w-full" id="negotiation-tables-container">
+            <!-- SVG se insertará aquí con JavaScript para evitar conflictos -->
             
-            <!-- Sección superior del plano -->
-            <div class="relative mb-8">
-                
-                <!-- Área gris superior -->
-                <div class="bg-gray-400 h-16 rounded-t-lg mb-4 relative">
-                    <!-- Elementos decorativos superiores -->
-                    <div class="absolute top-2 left-1/4 w-8 h-8 bg-white rounded border-2 border-gray-600"></div>
-                    <div class="absolute top-2 right-1/4 w-8 h-8 bg-white rounded border-2 border-gray-600"></div>
-                </div>
-                
-                <!-- Área principal de mesas -->
-                <div class="bg-white rounded-lg p-6 border-2 border-gray-300 relative">
-                    
-                    <!-- Sección izquierda de mesas -->
-                    <div class="grid grid-cols-2 gap-8">
-                        
-                        <!-- Columna izquierda -->
-                        <div class="space-y-2">
-                            @php
-                                $leftTables = [
-                                    [79, 62, 61, 44],
-                                    [78, 63, 60, 45],
-                                    [80, 77, 64, 59, 46],
-                                    [81, 76, 65, 58, 47],
-                                    [82, 75, 66, 57, 48],
-                                    [83, 74, 67, 56, 49],
-                                    [84, 73, 68, 55, 50],
-                                    [85, 72, 69, 54, 51],
-                                    [86, 71, 70, 53, 52]
-                                ];
-                            @endphp
-                            
-                            @foreach($leftTables as $row)
-                                <div class="flex gap-1 justify-center">
-                                    @foreach($row as $tableNum)
-                                        @php $table = $tables->get($tableNum); @endphp
-                                        <div class="relative group">
-                                            <div class="w-10 h-8 {{ $table && $table->is_reserved ? 'bg-red-500 hover:bg-red-600' : 'bg-gray-300 hover:bg-gray-400' }} 
-                                                        border border-gray-500 rounded flex items-center justify-center 
-                                                        transition-colors duration-200 cursor-pointer">
-                                                <span class="text-xs font-bold {{ $table && $table->is_reserved ? 'text-white' : 'text-gray-700' }}">
-                                                    {{ str_pad($tableNum, 2, '0', STR_PAD_LEFT) }}
-                                                </span>
-                                            </div>
-                                            
-                                            @if($table && $table->is_reserved && $table->company_name)
-                                                <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 
-                                                            opacity-0 group-hover:opacity-100 transition-opacity duration-200 
-                                                            bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-10">
-                                                    {{ $table->company_name }}
-                                                    <div class="absolute top-full left-1/2 transform -translate-x-1/2 
-                                                               border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                    @endforeach
-                                </div>
-                            @endforeach
-                        </div>
-                        
-                        <!-- Columna derecha -->
-                        <div class="space-y-2">
-                            @php
-                                $rightTables = [
-                                    [43, 26, 25, 8],
-                                    [42, 27, 24, 9],
-                                    [41, 28, 23, 10, 7],
-                                    [40, 29, 22, 11, 6],
-                                    [39, 30, 21, 12, 5],
-                                    [38, 31, 20, 13, 4],
-                                    [37, 32, 19, 14, 3],
-                                    [36, 33, 18, 15, 2],
-                                    [35, 34, 17, 16, 1]
-                                ];
-                            @endphp
-                            
-                            @foreach($rightTables as $row)
-                                <div class="flex gap-1 justify-center">
-                                    @foreach($row as $tableNum)
-                                        @php $table = $tables->get($tableNum); @endphp
-                                        <div class="relative group">
-                                            <div class="w-10 h-8 {{ $table && $table->is_reserved ? 'bg-red-500 hover:bg-red-600' : 'bg-gray-300 hover:bg-gray-400' }} 
-                                                        border border-gray-500 rounded flex items-center justify-center 
-                                                        transition-colors duration-200 cursor-pointer">
-                                                <span class="text-xs font-bold {{ $table && $table->is_reserved ? 'text-white' : 'text-gray-700' }}">
-                                                    {{ str_pad($tableNum, 2, '0', STR_PAD_LEFT) }}
-                                                </span>
-                                            </div>
-                                            
-                                            @if($table && $table->is_reserved && $table->company_name)
-                                                <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 
-                                                            opacity-0 group-hover:opacity-100 transition-opacity duration-200 
-                                                            bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-10">
-                                                    {{ $table->company_name }}
-                                                    <div class="absolute top-full left-1/2 transform -translate-x-1/2 
-                                                               border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                    @endforeach
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    
-                    <!-- Flechas direccionales en el centro -->
-                    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <div class="flex flex-col gap-1">
-                                <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                                <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sección inferior del plano -->
-            <div class="relative">
-                
-                <!-- Área de mesas inferiores -->
-                <div class="bg-white rounded-lg p-6 border-2 border-gray-300 mb-4">
-                    <div class="grid grid-cols-6 gap-1 justify-center max-w-md mx-auto">
-                        @php
-                            $bottomTables = [
-                                [87, 88, 89, 90, 91, 92],
-                                [98, 97, 96, 95, 94, 93]
-                            ];
-                        @endphp
-                        
-                        @foreach($bottomTables as $row)
-                            @foreach($row as $tableNum)
-                                @php $table = $tables->get($tableNum); @endphp
-                                <div class="relative group">
-                                    <div class="w-10 h-8 {{ $table && $table->is_reserved ? 'bg-red-500 hover:bg-red-600' : 'bg-gray-300 hover:bg-gray-400' }} 
-                                                border border-gray-500 rounded flex items-center justify-center 
-                                                transition-colors duration-200 cursor-pointer">
-                                        <span class="text-xs font-bold {{ $table && $table->is_reserved ? 'text-white' : 'text-gray-700' }}">
-                                            {{ str_pad($tableNum, 2, '0', STR_PAD_LEFT) }}
-                                        </span>
-                                    </div>
-                                    
-                                    @if($table && $table->is_reserved && $table->company_name)
-                                        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 
-                                                    opacity-0 group-hover:opacity-100 transition-opacity duration-200 
-                                                    bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-10">
-                                            {{ $table->company_name }}
-                                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 
-                                                       border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                                        </div>
-                                    @endif
-                                </div>
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-                
-                <!-- Área final inferior -->
-                <div class="grid grid-cols-4 gap-8 max-w-lg mx-auto">
-                    @php
-                        $finalTables = [
-                            [112, 105, 104],
-                            [111, 106, 103],
-                            [110, 107, 102, 99],
-                            [109, 108, 101, 100]
-                        ];
-                    @endphp
-                    
-                    @foreach($finalTables as $row)
-                        <div class="flex flex-col gap-1">
-                            @foreach($row as $tableNum)
-                                @php $table = $tables->get($tableNum); @endphp
-                                <div class="relative group">
-                                    <div class="w-10 h-8 {{ $table && $table->is_reserved ? 'bg-red-500 hover:bg-red-600' : 'bg-gray-300 hover:bg-gray-400' }} 
-                                                border border-gray-500 rounded flex items-center justify-center 
-                                                transition-colors duration-200 cursor-pointer">
-                                        <span class="text-xs font-bold {{ $table && $table->is_reserved ? 'text-white' : 'text-gray-700' }}">
-                                            {{ str_pad($tableNum, 2, '0', STR_PAD_LEFT) }}
-                                        </span>
-                                    </div>
-                                    
-                                    @if($table && $table->is_reserved && $table->company_name)
-                                        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 
-                                                    opacity-0 group-hover:opacity-100 transition-opacity duration-200 
-                                                    bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-10">
-                                            {{ $table->company_name }}
-                                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 
-                                                       border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                                        </div>
-                                    @endif
-                                </div>
-                            @endforeach
-                        </div>
-                    @endforeach
-                </div>
-                
-                <!-- Área gris inferior -->
-                <div class="bg-gray-400 h-12 rounded-b-lg mt-4"></div>
+            <!-- Tooltip para mostrar empresa -->
+            <div id="nego-table-tooltip" class="absolute opacity-0 transition-opacity duration-200 pointer-events-none">
+                <span id="nego-tooltip-text"></span>
+                <div class="nego-tooltip-arrow absolute top-full left-1/2 transform -translate-x-1/2 
+                           border-l-4 border-r-4 border-t-4 border-transparent"></div>
             </div>
         </div>
     </div>
 
-    <!-- Leyenda -->
-    <div class="flex justify-center gap-8 mt-6">
-        <div class="flex items-center gap-2">
-            <div class="w-4 h-4 bg-gray-300 border border-gray-500 rounded"></div>
-            <span class="text-sm text-gray-600">Disponible</span>
-        </div>
-        <div class="flex items-center gap-2">
-            <div class="w-4 h-4 bg-red-500 border border-gray-500 rounded"></div>
-            <span class="text-sm text-gray-600">Reservada</span>
-        </div>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar y procesar el SVG con namespace único
+            const container = document.getElementById('negotiation-tables-container');
+            
+            // Obtener el contenido del SVG
+            let svgContent = `{!! addslashes(file_get_contents(public_path('img/ms-trabajo.svg'))) !!}`;
+            
+            // Agregar prefijo único a todos los IDs y referencias para evitar conflictos
+            svgContent = svgContent.replace(/id="([^"]+)"/g, 'id="nego-$1"');
+            svgContent = svgContent.replace(/url\(#([^)]+)\)/g, 'url(#nego-$1)');
+            svgContent = svgContent.replace(/href="#([^"]+)"/g, 'href="#nego-$1"');
+            svgContent = svgContent.replace(/xlink:href="#([^"]+)"/g, 'xlink:href="#nego-$1"');
+            
+            // CRÍTICO: Agregar prefijo a las clases CSS para evitar conflictos de estilos
+            svgContent = svgContent.replace(/class="([^"]+)"/g, 'class="nego-$1"');
+            svgContent = svgContent.replace(/\.cls-/g, '.nego-cls-');
+            
+            // Insertar el SVG procesado
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = svgContent;
+            const svgElement = tempDiv.querySelector('svg');
+            if (svgElement) {
+                container.insertBefore(svgElement, container.firstChild);
+            }
+            
+            // Datos de las mesas desde Livewire
+            const tables = @json($tables);
+            const tooltip = document.getElementById('nego-table-tooltip');
+            const tooltipText = document.getElementById('nego-tooltip-text');
+            
+            // DEBUG: Verificar datos cargados
+            console.log('📊 Mesas de Negociación cargadas:', tables);
+            console.log('🔢 Total de mesas:', Object.keys(tables).length);
+            
+            // Contar reservadas
+            const reservedTables = Object.values(tables).filter(t => t.is_reserved);
+            console.log('🔴 Mesas reservadas:', reservedTables.length, reservedTables);
+            
+            // Función para aplicar funcionalidad dinámica
+            function applyTableFunctionality() {
+                console.log('🎨 Iniciando coloreo de mesas...');
+                
+                // DEBUG: Ver todos los números en el SVG
+                const allTextElements = document.querySelectorAll('#negotiation-tables-container text');
+                const svgNumbers = new Set();
+                allTextElements.forEach(el => {
+                    const text = el.textContent.trim();
+                    if (text && !isNaN(text)) {
+                        svgNumbers.add(text);
+                    }
+                });
+                console.log('🔢 Números encontrados en SVG:', Array.from(svgNumbers).sort((a,b) => parseInt(a) - parseInt(b)));
+                
+                // DEBUG: Ver qué mesas están reservadas
+                const reservedTableNumbers = Object.keys(tables).filter(key => tables[key].is_reserved);
+                console.log('🔴 Números de mesas reservadas en BD:', reservedTableNumbers);
+                
+                let coloredCount = 0;
+                
+                for (let tableNumber = 1; tableNumber <= 112; tableNumber++) {
+                    const table = tables[tableNumber];
+                    
+                    // Buscar elementos de texto en el SVG que contengan el número de la mesa
+                    const textElements = document.querySelectorAll('#negotiation-tables-container text');
+                    textElements.forEach(textEl => {
+                        const textContent = textEl.textContent.trim();
+                        
+                        // CRÍTICO: El SVG usa formato con padding (01, 02, etc.)
+                        const paddedNumber = tableNumber.toString().padStart(2, '0');
+                        
+                        // Comparar con ambos formatos: "1" y "01"
+                        if (textContent === tableNumber.toString() || textContent === paddedNumber) {
+                            // Si la mesa está reservada, cambiar color a rojo
+                            if (table && table.is_reserved) {
+                                console.log(`✅ Coloreando mesa #${tableNumber} (${paddedNumber}):`, table.company_name);
+                                coloredCount++;
+                                // Cambiar color del número
+                                textEl.style.fill = '#ef4444'; // Rojo
+                                textEl.style.fontWeight = 'bold';
+                                
+                                // Buscar el grupo padre que contiene todos los elementos de la mesa
+                                const tableGroup = textEl.closest('g');
+                                if (tableGroup) {
+                                    // Buscar todos los elementos gráficos en el grupo (contornos, formas)
+                                    const graphicElements = tableGroup.querySelectorAll('rect, circle, path, polygon, ellipse');
+                                    graphicElements.forEach(element => {
+                                        // Solo colorear elementos que no sean texto
+                                        if (element.tagName !== 'text') {
+                                            element.style.stroke = '#ef4444'; // Contorno rojo
+                                            element.style.strokeWidth = '2px';
+                                            element.style.fill = 'rgba(239, 68, 68, 0.1)'; // Relleno rojo semi-transparente
+                                        }
+                                    });
+                                    
+                                    // Agregar tooltip a todo el grupo si tiene empresa
+                                    if (table.company_name) {
+                                        tableGroup.style.cursor = 'pointer';
+                                        
+                                        tableGroup.addEventListener('mouseenter', function(e) {
+                                            tooltipText.textContent = table.company_name;
+                                            tooltip.style.opacity = '1';
+                                            updateTooltipPosition(e);
+                                        });
+                                        
+                                        tableGroup.addEventListener('mousemove', updateTooltipPosition);
+                                        
+                                        tableGroup.addEventListener('mouseleave', function() {
+                                            tooltip.style.opacity = '0';
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+                
+                console.log(`✨ Proceso completado. Mesas coloreadas: ${coloredCount}`);
+            }
+            
+            // Función para actualizar posición del tooltip
+            function updateTooltipPosition(e) {
+                const rect = document.getElementById('negotiation-tables-container').getBoundingClientRect();
+                tooltip.style.left = (e.clientX - rect.left + 10) + 'px';
+                tooltip.style.top = (e.clientY - rect.top - 40) + 'px';
+            }
+            
+            // Aplicar funcionalidad cuando el SVG esté cargado (aumentado a 300ms para asegurar procesamiento)
+            setTimeout(applyTableFunctionality, 300);
+        });
+    </script>
+
+    <style>
+        #negotiation-tables-container {
+            position: relative;
+        }
+        
+        #negotiation-tables-container svg {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Estilo mejorado para el tooltip */
+        #nego-table-tooltip {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border: 2px solid #333333;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 8px;
+            z-index: 9999;
+        }
+        
+        #nego-table-tooltip #nego-tooltip-text {
+            color: #ffffff !important;
+            text-shadow: none;
+        }
+        
+        /* Flecha del tooltip */
+        #nego-table-tooltip .nego-tooltip-arrow {
+            border-top-color: #000000 !important;
+        }
+    </style>
 </div>
