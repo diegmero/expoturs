@@ -15,7 +15,7 @@
     ])
 
     <!-- Sección Información General -->
-    <section class="mt-16 mx-4 lg:mx-16">|
+    <section class="mt-16 mx-4 lg:mx-16">
         <div class="bg-white rounded-[2.5rem] px-8 lg:px-16">
             <div class="max-w-7xl mx-auto">
                 
