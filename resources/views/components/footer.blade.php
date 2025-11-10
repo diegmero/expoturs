@@ -11,7 +11,7 @@
                     
                     <!-- Columna 1: ORGANIZED BY -->
                     <div class="text-center relative">
-                        <p class="text-[#08254f] font-bold text-xs sm:text-sm mb-4 sm:mb-6 tracking-wider">ORGANIZED BY</p>
+                        <p class="text-[#08254f] font-bold text-xs sm:text-sm mb-4 sm:mb-6 tracking-wider">{{ __('messages.footer.organized_by') }}</p>
                         <div class="flex justify-center">
                             <img src="{{ asset('img/SVG/LogoAcoprot.svg') }}" alt="ACOPROT" class="h-16 sm:h-20 lg:h-24 object-contain">
                         </div>
@@ -21,7 +21,7 @@
                     
                     <!-- Columna 2: STRATEGIC SUPPORT -->
                     <div class="text-center relative">
-                        <p class="text-[#08254f] font-bold text-xs sm:text-sm mb-4 sm:mb-6 tracking-wider">STRATEGIC SUPPORT</p>
+                        <p class="text-[#08254f] font-bold text-xs sm:text-sm mb-4 sm:mb-6 tracking-wider">{{ __('messages.footer.strategic_support') }}</p>
                         <div class="flex justify-center">
                             <img src="{{ asset('img/SVG/logoWilliam.svg') }}" alt="William H. Coleman, Inc." class="h-12 sm:h-14 lg:h-16 object-contain">
                         </div>
@@ -49,7 +49,7 @@
                     <!-- Información de Contacto -->
                     <div class="text-center lg:text-left">
                         <p class="text-white text-sm sm:text-base lg:text-lg xl:text-xl font-medium">
-                            Contact us | 
+                            {{ __('messages.footer.contact_us') }} | 
                             <a href="mailto:info@expotur.com" class="hover:text-blue-300 transition-colors">info@expotur.com</a> | 
                             <a href="https://wa.me/50670182132" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors">+506 7018-2132</a>
                         </p>
@@ -87,7 +87,7 @@
                 <!-- Línea de créditos -->
                 <div class="mt-4 sm:mt-6 pt-4 sm:pt-6 text-center">
                     <p class="text-white/80 text-sm sm:text-base lg:text-lg">
-                        Hecho con <span class="text-white-400">♥</span> por Inventivaestudio.com
+                        {{ __('messages.footer.made_with_love') }} <span class="text-white-400">♥</span> {{ __('messages.footer.by') }} Inventivaestudio.com
                     </p>
                 </div>
                 

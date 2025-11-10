@@ -39,7 +39,7 @@
                         <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" stroke-linecap="round"/>
                         <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
                     </svg>
-                    <span class="text-sm sm:text-2xl font-light tracking-wide text-center">MAY 27-29, 2026</span>
+                    <span class="text-sm sm:text-2xl font-light tracking-wide text-center">{{ __('messages.hero.date') }}</span>
                 </div>
                 
                 <!-- Ubicación -->
@@ -48,7 +48,7 @@
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="2"/>
                         <circle cx="12" cy="10" r="3" stroke-width="2"/>
                     </svg>
-                    <span class="text-xs sm:text-2xl font-light tracking-wide text-center">CROWNE PLAZA SAN JOSÉ LA SABANA HOTEL</span>
+                    <span class="text-xs sm:text-2xl font-light tracking-wide text-center">{{ __('messages.hero.location') }}</span>
                 </div>
                 
             </div>
@@ -69,7 +69,7 @@
                 <a href="{{ route('expotur.2026') }}" 
                 class="group absolute inset-x-1 sm:inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-xs sm:text-lg lg:text-xl
                         {{ $activeTab === 'expotur' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.4] sm:scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.4] sm:hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-1 sm:px-2 inline-block {{ $activeTab === 'expotur' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">EXPOTUR 2026</span>
+                    <span class="px-1 sm:px-2 inline-block {{ $activeTab === 'expotur' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">{{ __('messages.nav.expotur_2026') }}</span>
                 </a>
             </div>
             
@@ -81,7 +81,7 @@
                 <a href="{{ route('sellers.info') }}" 
                    class="group absolute inset-x-1 sm:inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-xs sm:text-lg lg:text-xl
                           {{ $activeTab === 'sellers' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.4] sm:scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.4] sm:hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-1 sm:px-2 inline-block transition-transform duration-300 {{ $activeTab === 'sellers' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">SELLERS INFO</span>
+                    <span class="px-1 sm:px-2 inline-block transition-transform duration-300 {{ $activeTab === 'sellers' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">{{ __('messages.nav.sellers_info') }}</span>
                 </a>
             </div>
             
@@ -90,7 +90,7 @@
                 <a href="{{ route('buyer') }}" 
                    class="group absolute inset-x-1 sm:inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-xs sm:text-lg lg:text-xl
                           {{ $activeTab === 'buyer' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.4] sm:scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.4] sm:hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-1 sm:px-2 inline-block transition-transform duration-300 {{ $activeTab === 'buyer' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">BE A BUYER</span>
+                    <span class="px-1 sm:px-2 inline-block transition-transform duration-300 {{ $activeTab === 'buyer' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">{{ __('messages.nav.be_a_buyer') }}</span>
                 </a>
             </div>
             
@@ -103,7 +103,7 @@
                    onclick="event.preventDefault(); document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });"
                    class="group absolute inset-x-1 sm:inset-x-2 inset-y-0 flex items-center justify-center text-[#08254f] font-bold transition-all duration-300 ease-out text-center rounded-2xl text-xs sm:text-lg lg:text-xl
                           {{ $activeTab === 'contact' ? 'bg-gradient-to-r from-[#E67E22] to-[#D35400] text-white shadow-2xl scale-y-[1.4] sm:scale-y-[1.6] origin-center z-30' : 'hover:bg-gradient-to-r hover:from-[#E67E22] hover:to-[#D35400] hover:text-white hover:shadow-2xl hover:scale-y-[1.4] sm:hover:scale-y-[1.6] hover:origin-center hover:z-20 z-10' }}">
-                    <span class="px-1 sm:px-2 inline-block transition-transform duration-300 {{ $activeTab === 'contact' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">CONTACT US</span>
+                    <span class="px-1 sm:px-2 inline-block transition-transform duration-300 {{ $activeTab === 'contact' ? 'scale-y-[0.71] sm:scale-y-[0.625]' : 'group-hover:scale-y-[0.71] sm:group-hover:scale-y-[0.625]' }}">{{ __('messages.nav.contact_us') }}</span>
                 </a>
             </div>
             

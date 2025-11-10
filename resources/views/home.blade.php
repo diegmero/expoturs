@@ -9,8 +9,8 @@
     <!-- Hero con Navegación Flotante -->
     @include('components.hero-navigation', [
         'heroImage' => 'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109289/header_Home_awv29m.webp',
-        'heroTitle' => 'WHERE OPPORTUNITIES BECOME BUSINESS!',
-        'heroSubtitle' => 'Pura Vida',
+        'heroTitle' => __('messages.hero.title'),
+        'heroSubtitle' => __('messages.hero.subtitle'),
         'showEventInfo' => true,
         'activeTab' => 'home'
     ])

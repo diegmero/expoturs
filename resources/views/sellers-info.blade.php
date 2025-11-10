@@ -22,10 +22,10 @@
                 <!-- Header con título y botón -->
                 <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
                     <h2 class="text-[#045e7c] text-4xl lg:text-5xl font-bold mb-6 lg:mb-0">
-                        Información General
+                        {{ __('messages.sellers.title') }}
                     </h2>
                     <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-lg">
-                        <a href="https://registro.aplicacionesincontacto.com/#/formview/68ff964010f8f1627c1c30f4" target="_blank">RESERVATION FORM</a>
+                        <a href="https://registro.aplicacionesincontacto.com/#/formview/68ff964010f8f1627c1c30f4" target="_blank">{{ __('messages.common.reservation_form') }}</a>
                     </button>
                 </div>
                 
@@ -36,42 +36,42 @@
                     <div class="lg:col-span-3 bg-gradient-to-b from-[#4EAAA8] via-[#045e7c] to-[#08254f] rounded-b-[6rem] p-8 text-white relative">
                         <!-- Fecha -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Fecha</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.date_label') }}</p>
                         </div>
                         
                         <!-- Sede -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Sede</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.venue_label') }}</p>
                         </div>
                         
                         <!-- Edición -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Edición</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.edition_label') }}</p>
                         </div>
                         
                         <!-- Inicio -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Inicio</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.start_label') }}</p>
                         </div>
                         
                         <!-- Frecuencia -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Frecuencia</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.frequency_label') }}</p>
                         </div>
                         
                         <!-- Enfoque -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Enfoque</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.focus_label') }}</p>
                         </div>
                         
                         <!-- Carácter -->
                         <div class="mb-8">
-                            <p class="font-bold text-lg mb-1">Carácter</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.character_label') }}</p>
                         </div>
                         
                         <!-- Resumen -->
                         <div>
-                            <p class="font-bold text-lg mb-1">Resumen</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.sellers.summary_label') }}</p>
                         </div>
                     </div>
                     
@@ -79,38 +79,38 @@
                     <div class="lg:col-span-9 bg-white p-8 space-y-6">
                         <!-- Línea superior -->
                         <div class="">
-                            <p class="text-gray-700 text-lg">27-29 de mayo, 2026</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.sellers.date_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">Hotel Crowne Plaza San José - La Sabana</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.sellers.venue_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">39</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.sellers.edition_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">1985</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.sellers.start_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">Anual</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.sellers.frequency_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">B2B</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.sellers.focus_value') }}</p>
                         </div>
                         
                         <div class="">
                             <p class="text-gray-700 text-lg text-justify leading-relaxed">
-                                Bolsa de Comercialización Turística de Costa Rica que muestra el producto turístico nacional a un selecto grupo de compradores internacionales invitados.
+                                {{ __('messages.sellers.character_value') }}
                             </p>
                         </div>
                         
                         <div class="">
                             <p class="text-gray-700 text-lg text-justify leading-relaxed">
-                                Citas pre establecidas entre compradores y vendedores. La participación garantiza 24 citas pre establecidas de 20 minutos, priorizando el Perfect Match y Buyer Request.
+                                {{ __('messages.sellers.summary_value') }}
                             </p>
                         </div>
                     </div>
@@ -120,10 +120,10 @@
                 <!-- ¿Qué es Expotur? -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        ¿Qué es Expotur?
+                        {{ __('messages.sellers.what_is_expotur') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-4">
-                        <span class="font-semibold">Expotur,</span> es el evento oficial comercialización turística de mayor trayectoria del país y el más antiguo de la región latinoamericana. Se realiza de forma anual desde 1985 y a lo largo de estas décadas ha generado un invaluable aporte al desarrollo turístico de Costa Rica.
+                        {!! __('messages.sellers.what_is_expotur_text') !!}
                     </p>
                 </div>
                 
@@ -133,27 +133,27 @@
                 <!-- Edición 2026 -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-2xl lg:text-3xl font-bold mb-6">
-                        Edición 2026
+                        {{ __('messages.sellers.edition_2026') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        <span class="font-semibold">"Where opportunities become business"</span> Expotur 2026 representa una edición enfocada en la esencia del negocio y en garantizar un programa de citas altamente efectivo, que se traducirá en negocios concretos para las empresas vendedoras participantes.
+                        {!! __('messages.sellers.edition_2026_text') !!}
                     </p>
                 </div>
 
                 <!-- Barra Azul Final -->
                 <div class="bg-[#08254f] rounded-2xl py-8 px-8 mb-12 text-center shadow-lg">
                     <h3 class="text-white text-4xl lg:text-5xl font-bold">
-                        ¡PURA VIDA...PUROS NEGOCIOS!
+                        {{ __('messages.sellers.slogan') }}
                     </h3>
                 </div>
                 
                 <!-- ¿Quiénes exponen? -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        ¿Quiénes exponen?
+                        {{ __('messages.sellers.who_exhibits') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        Hoteleros, Tour Operadores, DMCs, Autorrentistas, Parques temáticos y de aventura, y otras empresas relacionadas directamente con el producto turístico nacional.
+                        {{ __('messages.sellers.who_exhibits_text') }}
                     </p>
                 </div>
                 
@@ -163,10 +163,10 @@
                 <!-- Networking -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        Networking
+                        {{ __('messages.sellers.networking') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        El enfoque renovado de <span class="font-semibold">Expotur 2026,</span> asegura a las empresas participantes, altas oportunidades de Networking y un programa de citas pre establecidas garantizando un amplio retorno a la inversión.
+                        {!! __('messages.sellers.networking_text') !!}
                     </p>
                 </div>
                 
@@ -175,20 +175,20 @@
                 <!-- Trayectoria - Innovación - Comercialización -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-2xl lg:text-3xl font-bold mb-6">
-                        Trayectoria - Innovación - Comercialización
+                        {{ __('messages.sellers.trajectory_title') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        <span class="font-semibold">Expotur es el evento oficial de comercialización turística de Costa Rica,</span> declarado de interés público bajo el decreto #17563-MEC del 17 junio de 1987 y representa el evento turístico de mayor trayectoria del país. Su edición 2026 presenta un concepto innovador, con un regreso a lo esencial, la comercialización turística y citas de negocios altamente efectivas con un grupo de compradores internacionales seleccionados bajo un estricto proceso de calificación, según su volumen de negocios a Costa Rica, así como representantes tanto de mercados tradicionales como emergentes de nuestro producto turístico.
+                        {!! __('messages.sellers.trajectory_text') !!}
                     </p>
                 </div>
                 
                 <!-- Categorías de participación -->
                 <div class="mb-16">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        Categorías de participación
+                        {{ __('messages.sellers.participation_categories') }}
                     </h3>
                     <p class="text-gray-700 text-lg mb-12">
-                        <span class="font-semibold">Expotur 2026</span> ofrece 3 categorías de participación, garantizando en ambas un programa de citas detallado.
+                        {!! __('messages.sellers.participation_intro') !!}
                     </p>
                     
                     <!-- Grid de Tarjetas de Precios -->
@@ -199,29 +199,29 @@
                             <div class="bg-white rounded-3xl h-full pb-6">
                                 <!-- Header de la tarjeta -->
                                 <div class="bg-[#08254f] text-white text-center py-4 px-6 mb-6">
-                                    <h4 class="font-bold text-lg">Tarifas de pronto pago</h4>
-                                    <p class="text-sm">(hasta el 31 de diciembre 2025)</p>
+                                    <h4 class="font-bold text-lg">{{ __('messages.sellers.early_bird_rates') }}</h4>
+                                    <p class="text-sm">{{ __('messages.sellers.early_bird_until') }}</p>
                                 </div>
                                 
                                 <!-- Mesa de negociación -->
                                 <div class="text-center mb-6 pb-6 border-b border-gray-200">
-                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Mesa de negociación</h5>
-                                    <p class="text-2xl font-bold text-gray-700">USD 1,700 + IVA</p>
-                                    <p class="text-gray-600">Mil setecientos dólares</p>
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">{{ __('messages.sellers.negotiation_table') }}</h5>
+                                    <p class="text-2xl font-bold text-gray-700">{{ __('messages.sellers.price_1700') }}</p>
+                                    <p class="text-gray-600">{{ __('messages.sellers.price_1700_text') }}</p>
                                 </div>
                                 
                                 <!-- Hospitality suite -->
                                 <div class="text-center mb-6 pb-6 border-b border-gray-200">
-                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Hospitality suite</h5>
-                                    <p class="text-2xl font-bold text-gray-700">USD 4,000 + IVA</p>
-                                    <p class="text-gray-600">Cuatro mil dólares</p>
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">{{ __('messages.sellers.hospitality_suite') }}</h5>
+                                    <p class="text-2xl font-bold text-gray-700">{{ __('messages.sellers.price_4000') }}</p>
+                                    <p class="text-gray-600">{{ __('messages.sellers.price_4000_text') }}</p>
                                 </div>
                                 
                                 <!-- Cámaras y asociaciones -->
                                 <div class="text-center">
-                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Cámaras y asociaciones</h5>
-                                    <p class="text-2xl font-bold text-gray-700">USD 500 + IVA</p>
-                                    <p class="text-gray-600">Quinientos dólares</p>
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">{{ __('messages.sellers.chambers_associations') }}</h5>
+                                    <p class="text-2xl font-bold text-gray-700">{{ __('messages.sellers.price_500') }}</p>
+                                    <p class="text-gray-600">{{ __('messages.sellers.price_500_text') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -231,29 +231,29 @@
                             <div class="bg-white rounded-3xl h-full">
                                 <!-- Header de la tarjeta -->
                                 <div class="bg-[#08254f] text-white text-center py-4 px-6 mb-6">
-                                    <h4 class="font-bold text-lg">Tarifas a partir del</h4>
-                                    <p class="text-sm">01 de enero 2025</p>
+                                    <h4 class="font-bold text-lg">{{ __('messages.sellers.rates_from') }}</h4>
+                                    <p class="text-sm">{{ __('messages.sellers.rates_from_date') }}</p>
                                 </div>
                                 
                                 <!-- Mesa de negociación -->
                                 <div class="text-center mb-6 pb-6 border-b border-gray-200">
-                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Mesa de negociación</h5>
-                                    <p class="text-2xl font-bold text-gray-700">USD 1,900 + IVA</p>
-                                    <p class="text-gray-600">Mil novecientos dólares</p>
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">{{ __('messages.sellers.negotiation_table') }}</h5>
+                                    <p class="text-2xl font-bold text-gray-700">{{ __('messages.sellers.price_1900') }}</p>
+                                    <p class="text-gray-600">{{ __('messages.sellers.price_1900_text') }}</p>
                                 </div>
                                 
                                 <!-- Hospitality suite -->
                                 <div class="text-center mb-6 pb-6 border-b border-gray-200">
-                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Hospitality suite</h5>
-                                    <p class="text-2xl font-bold text-gray-700">USD 4,500 + IVA</p>
-                                    <p class="text-gray-600">Cuatro mil quinientos dólares</p>
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">{{ __('messages.sellers.hospitality_suite') }}</h5>
+                                    <p class="text-2xl font-bold text-gray-700">{{ __('messages.sellers.price_4500') }}</p>
+                                    <p class="text-gray-600">{{ __('messages.sellers.price_4500_text') }}</p>
                                 </div>
                                 
                                 <!-- Cámaras y asociaciones -->
                                 <div class="text-center">
-                                    <h5 class="font-bold text-lg text-gray-800 mb-2">Cámaras y asociaciones</h5>
-                                    <p class="text-2xl font-bold text-gray-700">USD 500 + IVA</p>
-                                    <p class="text-gray-600">Quinientos dólares</p>
+                                    <h5 class="font-bold text-lg text-gray-800 mb-2">{{ __('messages.sellers.chambers_associations') }}</h5>
+                                    <p class="text-2xl font-bold text-gray-700">{{ __('messages.sellers.price_500') }}</p>
+                                    <p class="text-gray-600">{{ __('messages.sellers.price_500_text') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -262,13 +262,13 @@
                     
                     <!-- Nota al pie -->
                     <p class="text-center text-gray-600 text-sm mb-8">
-                        (*) Confirmación sujeta a aprobación de la Comisión Organizadora
+                        {{ __('messages.sellers.confirmation_note') }}
                     </p>
                     
                     <!-- Barra azul final de sección -->
                     <div class="bg-[#08254f] py-6 px-8 text-center mb-12">
                         <h4 class="text-white text-2xl lg:text-3xl font-bold">
-                            PLANOS DE DISTRIBUCIÓN Y DISPONIBILIDAD DE ESPACIOS
+                            {{ __('messages.sellers.distribution_plans') }}
                         </h4>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                         
                         <!-- Título -->
                         <h3 class="text-[#045e7c] text-2xl font-bold mb-8">
-                            Características de los espacios
+                            {{ __('messages.sellers.space_characteristics') }}
                         </h3>
                         
                         <!-- Tabla de características -->
@@ -305,11 +305,11 @@
                             <!-- Mesa de negociación -->
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6 border-b border-gray-300">
                                 <div class="md:col-span-1">
-                                    <h4 class="text-gray-700 font-semibold text-lg">Mesa de negociación</h4>
+                                    <h4 class="text-gray-700 font-semibold text-lg">{{ __('messages.sellers.negotiation_table') }}</h4>
                                 </div>
                                 <div class="md:col-span-2">
                                     <p class="text-gray-700 text-base leading-relaxed text-justify">
-                                        Incluye participación de 2 delegados, programa de citas, mobiliario básico (mesa y cuatro sillas), rotulación de mesa, material y alimentación detallada en el programa.
+                                        {{ __('messages.sellers.negotiation_table_desc') }}
                                     </p>
                                 </div>
                             </div>
@@ -317,11 +317,11 @@
                             <!-- Hospitality Suite -->
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6 border-b border-gray-300">
                                 <div class="md:col-span-1">
-                                    <h4 class="text-gray-700 font-semibold text-lg">Hospitality Suite</h4>
+                                    <h4 class="text-gray-700 font-semibold text-lg">{{ __('messages.sellers.hospitality_suite') }}</h4>
                                 </div>
                                 <div class="md:col-span-2">
                                     <p class="text-gray-700 text-base leading-relaxed text-justify">
-                                        Suite para la atención personalizada de compradores de 33m² incluye participación de 2 delegados de la empresa vendedora, programa de citas, rotulación de puerta, mobiliario con mesa tablero, mantelería y 4 sillas, pantalla de 42 pulgadas, mini salita lounge de mesa redonda y 1 sillón, y dos mesas de apoyo para material promocional, baño privado, material y alimentación detallada en el programa.
+                                        {{ __('messages.sellers.hospitality_suite_desc') }}
                                     </p>
                                 </div>
                             </div>
@@ -329,11 +329,11 @@
                             <!-- Cámaras y asociaciones sectoriales -->
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6">
                                 <div class="md:col-span-1">
-                                    <h4 class="text-gray-700 font-semibold text-lg">Cámaras y asociaciones sectoriales</h4>
+                                    <h4 class="text-gray-700 font-semibold text-lg">{{ __('messages.sellers.chambers_associations') }}</h4>
                                 </div>
                                 <div class="md:col-span-2">
                                     <p class="text-gray-700 text-base leading-relaxed text-justify">
-                                        Incluye participación de 2 delegados, programa de citas, mobiliario básico (mesa y cuatro sillas), rotulación de mesa, material y alimentación detallada en el programa. Ubicación salón Góndola.
+                                        {{ __('messages.sellers.chambers_desc') }}
                                     </p>
                                 </div>
                             </div>
@@ -343,7 +343,7 @@
                         <!-- Botón de reservación -->
                         <div class="flex justify-center mt-12">
                             <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-lg">
-                        <a href="https://registro.aplicacionesincontacto.com/#/formview/68ff964010f8f1627c1c30f4" target="_blank">RESERVATION FORM</a>
+                        <a href="https://registro.aplicacionesincontacto.com/#/formview/68ff964010f8f1627c1c30f4" target="_blank">{{ __('messages.common.reservation_form') }}</a>
                     </button>
                         </div>
                     </div>

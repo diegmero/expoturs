@@ -22,10 +22,10 @@
                 <!-- Header con título y botón -->
                 <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
                     <h2 class="text-[#045e7c] text-4xl lg:text-5xl font-bold mb-6 lg:mb-0">
-                        General Information
+                        {{ __('messages.buyer.title') }}
                     </h2>
                     <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-lg">
-                        <a href="https://registro.aplicacionesincontacto.com/#/formview/6900d0b36d269fab62e3c9d4" target="_blank">APPLICANT PROFILE</a>
+                        <a href="https://registro.aplicacionesincontacto.com/#/formview/6900d0b36d269fab62e3c9d4" target="_blank">{{ __('messages.common.applicant_profile') }}</a>
                     </button>
                 </div>
                 
@@ -36,42 +36,42 @@
                     <div class="lg:col-span-3 bg-gradient-to-b from-[#4EAAA8] via-[#045e7c] to-[#08254f] rounded-b-[6rem] p-8 text-white relative">
                         <!-- Event Dates -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Event Dates</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.event_dates_label') }}</p>
                         </div>
                         
                         <!-- Site -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Site</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.site_label') }}</p>
                         </div>
                         
                         <!-- Edition -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Edition</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.edition_label') }}</p>
                         </div>
                         
                         <!-- First held -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">First held</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.first_held_label') }}</p>
                         </div>
                         
                         <!-- Frequency -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Frequency</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.frequency_label') }}</p>
                         </div>
                         
                         <!-- Type of event -->
                         <div class="mb-6">
-                            <p class="font-bold text-lg mb-1">Type of event</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.type_label') }}</p>
                         </div>
                         
                         <!-- Character -->
                         <div class="mb-8">
-                            <p class="font-bold text-lg mb-1">Character</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.character_label') }}</p>
                         </div>
                         
                         <!-- Summary -->
                         <div>
-                            <p class="font-bold text-lg mb-1">Summary</p>
+                            <p class="font-bold text-lg mb-1">{{ __('messages.buyer.summary_label') }}</p>
                         </div>
                     </div>
                     
@@ -79,38 +79,38 @@
                     <div class="lg:col-span-9 bg-white p-8 space-y-6">
                         <!-- Event Dates -->
                         <div class="">
-                            <p class="text-gray-700 text-lg">May 27 - 29, 2025</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.buyer.event_dates_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">Crowne Plaza San José - La Sabana</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.buyer.site_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">39th</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.buyer.edition_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">1985</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.buyer.first_held_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">Annual</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.buyer.frequency_value') }}</p>
                         </div>
                         
                         <div class="">
-                            <p class="text-gray-700 text-lg">B2B</p>
+                            <p class="text-gray-700 text-lg">{{ __('messages.buyer.type_value') }}</p>
                         </div>
                         
                         <div class="">
                             <p class="text-gray-700 text-lg text-justify leading-relaxed">
-                                The Costa Rica Tourism Travel Mart portrays national tourism attractions, products and services to a select group of international buyers with pre-arranged appointments between buyers and sellers.
+                                {{ __('messages.buyer.character_value') }}
                             </p>
                         </div>
                         
                         <div class="">
                             <p class="text-gray-700 text-lg text-justify leading-relaxed">
-                                Twenty four (24) pre-arranged appointments of 20 minutes. Appointments are guaranteed in which priority is given to "perfect match" and buyers requests.
+                                {{ __('messages.buyer.summary_value') }}
                             </p>
                         </div>
                     </div>
@@ -120,10 +120,10 @@
                 <!-- What is Expotur? -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        What is Expotur?
+                        {{ __('messages.buyer.what_is_expotur') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-4">
-                        It is the official commercialization event with the longest history of shows in Latin America. It has contributed to the development of tourism in Costa Rica.
+                        {{ __('messages.buyer.what_is_expotur_text') }}
                     </p>
                 </div>
                 
@@ -133,10 +133,10 @@
                 <!-- 2026 Edition -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-2xl lg:text-3xl font-bold mb-6">
-                        2026 Edition
+                        {{ __('messages.buyer.edition_2026') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        <span class="font-semibold">"Where opportunities become business"</span> EXPOTUR 2026 presents a show focussed on the essence of business meetings, human interactions, and of nature. It is a program of highly effective dealings which will benefit all participants.
+                        {!! __('messages.buyer.edition_2026_text') !!}
                     </p>
                 </div>
                 
@@ -146,13 +146,13 @@
                 <!-- Networking -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        Networking
+                        {{ __('messages.buyer.networking') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-4">
-                        <span class="font-semibold">Expotur 2026</span> offers great opportunities for <span class="font-semibold">networking</span>, whether you are new to this market or if you want to increase or renovate your business. Pre-arranged appointments aim a high return on investment. This is the only event suited for getting familiar with the best of Costa Rica's tourism offer.
+                        {!! __('messages.buyer.networking_text_1') !!}
                     </p>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        <span class="font-semibold">Expotur</span> is the official travel mart, declared of public interest by Decree No.17563-MEIC on June 17, 1987. This year, comes with a renovated concept, going back to the essence of business, creating a match of selected companies of Costa Rica's traditional and emerging markets with qualified buyers with proven interest in Costa Rica.
+                        {!! __('messages.buyer.networking_text_2') !!}
                     </p>
                 </div>
                 
@@ -162,17 +162,17 @@
                 <!-- Who are the sellers? -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        Who are the sellers?
+                        {{ __('messages.buyer.who_are_sellers') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        This edition will bring hoteliers, tour operators, DMCs, car rentals, thematic parks, adventure parks and other companies that complement the Costa Rica tourism product.
+                        {{ __('messages.buyer.who_are_sellers_text') }}
                     </p>
                 </div>
                 
                 <!-- Barra Azul -->
                 <div class="bg-[#08254f] py-8 px-8 mb-12 text-center shadow-lg">
                     <h3 class="text-white text-4xl lg:text-5xl font-bold">
-                        ¡PURA VIDA...<span class="font-normal">PUROS NEGOCIOS!</span>
+                        {!! __('messages.buyer.slogan') !!}
                     </h3>
                 </div>
                 
@@ -182,20 +182,20 @@
                 <!-- Participation categories -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        Participation categories
+                        {{ __('messages.buyer.participation_categories') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-4">
-                        <span class="font-semibold">Expotur 2026</span> offers 3 categories of participation, each of which guarantees a detailed program of appointments.
+                        {!! __('messages.buyer.participation_intro_1') !!}
                     </p>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-6">
-                        It includes the participation of 2 delegates from the selling company, program of appointments, furniture, table signage, material and food for the delegates.
+                        {{ __('messages.buyer.participation_intro_2') }}
                     </p>
                     
                     <!-- Lista de categorías -->
                     <div class="space-y-2 mb-8">
-                        <p class="text-gray-700 text-lg"><span class="font-semibold">1. Negotiating tables</span></p>
-                        <p class="text-gray-700 text-lg"><span class="font-semibold">2. Hospitality suites</span></p>
-                        <p class="text-gray-700 text-lg"><span class="font-semibold">3. Destinations</span></p>
+                        <p class="text-gray-700 text-lg">{!! __('messages.buyer.category_1') !!}</p>
+                        <p class="text-gray-700 text-lg">{!! __('messages.buyer.category_2') !!}</p>
+                        <p class="text-gray-700 text-lg">{!! __('messages.buyer.category_3') !!}</p>
                     </div>
                 </div>
                 
@@ -205,10 +205,10 @@
                 <!-- Hosted buyer longue & experiences 2026 -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        Hosted buyer longue & experiences 2026
+                        {{ __('messages.buyer.hosted_buyer_title') }}
                     </h3>
                     <p class="text-gray-700 text-lg text-justify leading-relaxed mb-8">
-                        In <span class="font-semibold">EXPOTUR 2026</span> you will enjoy entertainment functions as music, folk dancers, animal characters, and much more.
+                        {!! __('messages.buyer.hosted_buyer_text') !!}
                     </p>
                 </div>
                 
@@ -218,14 +218,14 @@
                 <!-- For more information, contact -->
                 <div class="mb-12">
                     <h3 class="text-[#045e7c] text-3xl lg:text-4xl font-bold mb-6">
-                        For more information, contact:
+                        {{ __('messages.buyer.contact_title') }}
                     </h3>
                     
                     <div class="space-y-2 mb-8">
-                        <p class="text-gray-700 text-lg font-semibold">Mrs. Daniela Ruiz</p>
-                        <p class="text-gray-700 text-lg">Hosted Buyer Coordinator</p>
-                        <p class="text-gray-700 text-lg">Expotur Travel Mart</p>
-                        <p class="text-gray-700 text-lg">buyers@expotur.com</p>
+                        <p class="text-gray-700 text-lg font-semibold">{{ __('messages.buyer.contact_name') }}</p>
+                        <p class="text-gray-700 text-lg">{{ __('messages.buyer.contact_position') }}</p>
+                        <p class="text-gray-700 text-lg">{{ __('messages.buyer.contact_company') }}</p>
+                        <p class="text-gray-700 text-lg">{{ __('messages.buyer.contact_email') }}</p>
                     </div>
                     
                     <!-- Redes sociales y botón -->
@@ -242,12 +242,12 @@
                                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
                             </a>
-                            <span class="text-[#045e7c] text-lg font-semibold">expoturcrc</span>
+                            <span class="text-[#045e7c] text-lg font-semibold">{{ __('messages.buyer.social_handle') }}</span>
                         </div>
                         
                         <!-- Botón APPLICANT PROFILE -->
                         <button class="bg-gradient-to-r from-[#E67E22] to-[#D35400] hover:from-[#D35400] hover:to-[#C0392B] text-white font-bold py-4 px-12 rounded-full text-xl transition-all shadow-lg">
-                            <a href="https://registro.aplicacionesincontacto.com/#/formview/6900d0b36d269fab62e3c9d4" target="_blank">APPLICANT PROFILE</a>
+                            <a href="https://registro.aplicacionesincontacto.com/#/formview/6900d0b36d269fab62e3c9d4" target="_blank">{{ __('messages.common.applicant_profile') }}</a>
                         </button>
                     </div>
                 </div>
