@@ -87,7 +87,7 @@
                 <!-- Línea de créditos -->
                 <div class="mt-4 sm:mt-6 pt-4 sm:pt-6 text-center">
                     <p class="text-white/80 text-sm sm:text-base lg:text-lg">
-                        {{ __('messages.footer.made_with_love') }} <span class="text-white-400">♥</span> {{ __('messages.footer.by') }} Inventivaestudio.com
+                        {{ __('messages.footer.made_with_love') }} <span class="text-white-400">♥</span> {{ __('messages.footer.by') }} <a href="https://inventivaestudio.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-300 transition-colors underline">Inventivaestudio.com</a>
                     </p>
                 </div>
                 
