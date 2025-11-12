@@ -157,4 +157,13 @@ return [
         'contact_email' => 'buyers@expotur.com',
         'social_handle' => 'expoturcrc',
     ],
+    
+    // Maps
+    'maps' => [
+        'hospitality_suites' => 'Hospitality <span class="text-[#045e7c]">Suites</span>',
+        'negotiation_tables' => 'Mesas de <span class="text-[#045e7c]">Negociación</span>',
+        'tourism_destinations' => 'Destinos & <span class="text-[#045e7c]">Cámaras de Turismo</span>',
+        'not_reserved' => 'No reservado',
+        'reserved' => 'Reservado',
+    ],
 ];

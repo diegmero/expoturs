@@ -2,7 +2,7 @@
     <!-- Título -->
     <div class="text-center mb-8">
         <h3 class="text-[#0094a7] text-3xl lg:text-4xl font-bold mb-2">
-            Mesas de <span class="text-[#045e7c]">Negociación</span>
+            {!! __('messages.maps.negotiation_tables') !!}
         </h3>
     </div>
 
@@ -160,6 +160,16 @@
         #negotiation-tables-container svg {
             width: 100%;
             height: auto;
+            /* Recortar más espacio superior donde estaban los elementos ocultos */
+            clip-path: inset(180px 0 0 0);
+            margin-top: -180px;
+        }
+        
+        /* Ocultar elementos no deseados del SVG */
+        #negotiation-tables-container .nego-cls-20,
+        #negotiation-tables-container .nego-cls-6,
+        #negotiation-tables-container .nego-cls-3 {
+            display: none !important;
         }
         
         /* Estilo mejorado para el tooltip */

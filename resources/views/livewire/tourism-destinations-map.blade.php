@@ -2,7 +2,7 @@
     <!-- Título -->
     <div class="text-center mb-8">
         <h3 class="text-[#0094a7] text-3xl lg:text-4xl font-bold mb-2">
-            Destinos & <span class="text-[#045e7c]">Cámaras de Turismo</span>
+            {!! __('messages.maps.tourism_destinations') !!}
         </h3>
     </div>
 
@@ -163,6 +163,15 @@
         #tourism-destinations-container svg {
             width: 100%;
             height: auto;
+            /* Recortar más espacio superior donde estaban los elementos ocultos */
+            clip-path: inset(180px 0 0 0);
+            margin-top: -180px;
+        }
+        
+        /* Ocultar elementos no deseados del SVG */
+        #tourism-destinations-container .tour-cls-5,
+        #tourism-destinations-container .tour-cls-3 {
+            display: none !important;
         }
         
         /* Estilo mejorado para el tooltip */

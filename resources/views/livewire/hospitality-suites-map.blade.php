@@ -2,7 +2,7 @@
     <!-- Título -->
     <div class="text-center mb-8">
         <h3 class="text-[#0094a7] text-3xl lg:text-4xl font-bold mb-2">
-            Hospitality <span class="text-[#045e7c]">Suites</span>
+            {!! __('messages.maps.hospitality_suites') !!}
         </h3>
     </div>
 
@@ -101,6 +101,16 @@
         #hospitality-suites-container svg {
             width: 100%;
             height: auto;
+            /* Recortar espacio superior donde estaban los elementos ocultos */
+            clip-path: inset(120px 0 0 0);
+            margin-top: -120px;
+        }
+        
+        /* Ocultar elementos no deseados del SVG */
+        #hospitality-suites-container .cls-20,
+        #hospitality-suites-container .cls-6,
+        #hospitality-suites-container .cls-3 {
+            display: none !important;
         }
         
         /* Estilo mejorado para el tooltip */
