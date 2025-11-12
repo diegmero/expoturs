@@ -276,16 +276,53 @@
                 <!-- Mapa de Hospitality Suites -->
                 <div class="mb-16">
                     @livewire('hospitality-suites-map')
+                    
+                    <!-- Leyenda de colores -->
+                    <div class="flex justify-center items-center gap-6 mt-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 rounded-full border" style="background-color: #6b7280; border-color: #9ca3af;"></div>
+                            <span class="text-gray-700 font-medium">No reservado</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 rounded-full border" style="background-color: #ef4444; border-color: #f87171;"></div>
+                            <span class="text-red-700 font-medium">Reservado</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Mapa de Mesas de Negociación -->
                 <div class="mb-16">
                     @livewire('negotiation-tables-map')
+                    
+                    <!-- Leyenda de colores -->
+                    <div class="flex justify-center items-center gap-6 mt-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 rounded-full border" style="background-color: #6b7280; border-color: #9ca3af;"></div>
+                            <span class="text-gray-700 font-medium">No reservado</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 rounded-full border" style="background-color: #ef4444; border-color: #f87171;"></div>
+                            <span class="text-red-700 font-medium">Reservado</span>
+                        </div>
+                    </div>
                 </div>
+
                 
                 <!-- Mapa de Destinos & Cámaras de Turismo -->
                 <div class="mb-16">
                     @livewire('tourism-destinations-map')
+                    
+                    <!-- Leyenda de colores -->
+                    <div class="flex justify-center items-center gap-6 mt-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 rounded-full border" style="background-color: #6b7280; border-color: #9ca3af;"></div>
+                            <span class="text-gray-700 font-medium">No reservado</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 rounded-full border" style="background-color: #ef4444; border-color: #f87171;"></div>
+                            <span class="text-red-700 font-medium">Reservado</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Características de los espacios -->
