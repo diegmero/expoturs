@@ -11,10 +11,15 @@ services:
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
-      - ./:/var/www/html
+      - expotur-db:/var/www/html/database
+      - expotur-storage:/var/www/html/storage
       - ./docker/000-default.conf:/etc/apache2/sites-available/000-default.conf
     ports:
       - "${APP_PORT:-8000}:80"
     environment:
       - DB_CONNECTION=sqlite
       - DB_DATABASE=/var/www/html/database/database.sqlite
+
+volumes:
+  expotur-db:
+  expotur-storage:
