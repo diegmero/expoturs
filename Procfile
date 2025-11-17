@@ -1,2 +1,2 @@
-release: touch database/database.sqlite && php artisan migrate --force && php artisan optimize
+release: mkdir -p /app/storage/database && touch /app/storage/database/database.sqlite && chmod 666 /app/storage/database/database.sqlite && php artisan migrate --force && php artisan optimize
 web: vendor/bin/heroku-php-apache2 public/
