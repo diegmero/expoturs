@@ -14,8 +14,27 @@ if [ "$1" = "apache2-foreground" ]; then
         php artisan key:generate --force
     fi
 
+    # ===== NUEVA SECCIÓN: ESPERAR A MYSQL =====
+    echo "Waiting for MySQL to be ready..."
+    MAX_TRIES=30
+    COUNT=0
+    
+    until php artisan db:show 2>/dev/null || [ $COUNT -eq $MAX_TRIES ]; do
+        COUNT=$((COUNT + 1))
+        echo "MySQL is unavailable - attempt $COUNT/$MAX_TRIES - sleeping"
+        sleep 2
+    done
+
+    if [ $COUNT -eq $MAX_TRIES ]; then
+        echo "ERROR: MySQL did not become available in time"
+        exit 1
+    fi
+    
+    echo "MySQL is ready!"
+    # ===== FIN NUEVA SECCIÓN =====
+
     # Verificar si la base de datos ya está migrada.
-    MIGRATIONS=$(php artisan migrate:status | grep 'Ran' | wc -l)
+    MIGRATIONS=$(php artisan migrate:status 2>/dev/null | grep 'Ran' | wc -l || echo "0")
     if [ "$MIGRATIONS" -eq 0 ]; then
         echo "No migrations found. Running migrate:fresh --seed..."
         php artisan migrate:fresh --seed --force

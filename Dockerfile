@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev \
     libicu-dev \
-    # Instalar Node.js (LTS)
     && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs
 
@@ -52,7 +51,7 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Cambiar propietario de los archivos
 RUN chown -R www:www /var/www/html
 
-# Cambiar al usuario no-root
+# Cambiar al usuario no-root TEMPORALMENTE para instalar dependencias
 USER www
 
 # Instalar dependencias de Composer
@@ -63,6 +62,9 @@ RUN cd /var/www/html && php artisan key:generate --force
 
 # Instalar dependencias de NPM y construir assets
 RUN npm install && npm run build
+
+# IMPORTANTE: Volver a root para que Apache pueda correr
+USER root
 
 # Establecer el script de entrada
 ENTRYPOINT ["entrypoint.sh"]
