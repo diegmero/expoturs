@@ -1,4 +1,6 @@
 #!/bin/sh
+echo "APP_ENV=$APP_ENV"
+env | grep APP_
 set -e
 
 # Verificar si estamos en producción
