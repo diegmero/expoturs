@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // Crear las suites, mesas y destinos
         $this->call([
+            FilamentUserSeeder::class,
             HospitalitySuiteSeeder::class,
             NegotiationTableSeeder::class,
             TourismDestinationSeeder::class,
