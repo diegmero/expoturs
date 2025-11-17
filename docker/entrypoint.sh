@@ -8,6 +8,15 @@ if [ ! -f /var/www/html/database/database.sqlite ]; then
     touch /var/www/html/database/database.sqlite
 fi
 
+# Crear archivo .env mínimo si no existe
+if [ ! -f /var/www/html/.env ]; then
+    echo "APP_ENV=development" > /var/www/html/.env
+    echo "APP_DEBUG=true" >> /var/www/html/.env
+    echo "DB_CONNECTION=sqlite" >> /var/www/html/.env
+    echo "DB_DATABASE=/var/www/html/database/database.sqlite" >> /var/www/html/.env
+    echo ".env básico creado (sin secretos)."
+fi
+
 # Verificar si estamos en producción
 if [ "$APP_ENV" = "production" ]; then
     echo "Running in production environment. Running migrations without seeding..."
