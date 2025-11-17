@@ -58,6 +58,9 @@ USER www
 # Instalar dependencias de Composer
 RUN composer install --optimize-autoloader --no-dev
 
+# Generar APP_KEY después de instalar Composer
+RUN cd /var/www/html && php artisan key:generate --force
+
 # Instalar dependencias de NPM y construir assets
 RUN npm install && npm run build
 

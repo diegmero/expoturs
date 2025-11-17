@@ -30,13 +30,36 @@ Expoturs es una plataforma web moderna construida para conectar compradores y ve
 
 ### 🐳 Levantar entorno local con Docker Compose
 
-```bash
-docker-compose up --build
-```
+1. Copia el archivo de entorno:
+   ```bash
+   cp .env.example .env
+   ```
+   Asegúrate que las variables de base de datos sean:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=db
+   DB_PORT=3306
+   DB_DATABASE=expoturs
+   DB_USERNAME=expoturs
+   DB_PASSWORD=expoturs
+   ```
 
-Accede a:
-- Frontend: http://localhost:8000
-- Panel Admin: http://localhost:8000/admin
+2. Levanta los servicios:
+   ```bash
+   docker compose up --build
+   ```
+
+3. Accede a:
+   - Frontend: http://localhost:8000
+   - Panel Admin: http://localhost:8000/admin
+
+#### Usuario admin para Filament
+
+Si es la primera vez, crea un usuario admin ejecutando:
+```bash
+docker compose exec app php artisan make:filament-user
+```
+Sigue las instrucciones para correo, nombre y contraseña. Ese será tu usuario de login en `/admin`.
 
 ### Requisitos Previos
 
@@ -189,7 +212,27 @@ php artisan config:cache       # Cachear configuración
 
 ## 🚀 Despliegue
 
-Para desplegar en hosting tradicional (cPanel):
+### Docker (Recomendado para desarrollo y producción)
+
+```bash
+# Desarrollo local
+docker compose up --build
+
+# Producción
+docker build -t expotur:latest .
+docker run -e APP_ENV=production -e APP_DEBUG=false -p 8000:80 expotur:latest
+```
+
+### Dokploy / Coolify / Kubernetes
+
+Ver guía completa en `DEPLOYMENT.md` para:
+- Configuración de variables de entorno seguras
+- Despliegue en Dokploy
+- Despliegue en Coolify
+- Despliegue en Kubernetes
+- CI/CD con GitHub Actions
+
+### Hosting Tradicional (cPanel)
 
 1. Subir archivos por FTP/SFTP
 2. Configurar `.env` con datos de producción

@@ -1,13 +1,51 @@
+# Git
 .git
 .gitignore
+.gitattributes
+
+# Docker
 .dockerignore
 docker-compose.yml
 Dockerfile
+
+# Dependencies (will be installed in image)
 node_modules
 vendor
+
+# Environment files (NEVER include in image)
 .env
+.env.backup
+.env.*.backup
+.env.local
+.env.*.local
 .env.production
+.env.production.example
+
+# Documentation
 README.md
-storage/logs/*.log
+DEPLOYMENT.md
+*.md
+
+# IDE
 .idea
 .vscode
+.fleet
+*.swp
+*.swo
+*~
+
+# Logs
+storage/logs/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.phpunit.result.cache
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.circleci
