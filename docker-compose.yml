@@ -21,6 +21,8 @@ services:
       - APP_DEBUG=true
       - DB_CONNECTION=sqlite
       - DB_DATABASE=/var/www/html/database/database.sqlite
+      - APP_URL=https://expotur-webdevelop-dimvqv-0a9e26-88-198-118-52.traefik.me
+      - APP_KEY=base64:4xWRvjXmZDN4naX33tQLvLc/+WDub1CGYCzea9m5fZU=
 
 volumes:
   expotur-db:
