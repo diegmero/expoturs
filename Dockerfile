@@ -42,6 +42,9 @@ COPY docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 # Copiar el código de la aplicación
 COPY . /var/www/html
 
+# Copiar .env.example y crear .env si no existe
+RUN if [ ! -f /var/www/html/.env ]; then cp /var/www/html/.env.example /var/www/html/.env; fi
+
 # Copiar y dar permisos de ejecución al script de entrada
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh

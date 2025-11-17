@@ -6,7 +6,7 @@ services:
       args:
         UID: ${UID:-1000}
         GID: ${GID:-1000}
-    image: expoturs-app
+    image: expoturs-app:latest
     container_name: expoturs-app
     restart: unless-stopped
     working_dir: /var/www/html

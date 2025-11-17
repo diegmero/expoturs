@@ -28,6 +28,16 @@ Expoturs es una plataforma web moderna construida para conectar compradores y ve
 
 ## 🚀 Instalación
 
+### 🐳 Levantar entorno local con Docker Compose
+
+```bash
+docker-compose up --build
+```
+
+Accede a:
+- Frontend: http://localhost:8000
+- Panel Admin: http://localhost:8000/admin
+
 ### Requisitos Previos
 
 - PHP 8.2 o superior

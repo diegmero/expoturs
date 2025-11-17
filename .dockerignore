@@ -6,7 +6,6 @@ Dockerfile
 node_modules
 vendor
 .env
-.env.example
 .env.production
 README.md
 storage/logs/*.log
