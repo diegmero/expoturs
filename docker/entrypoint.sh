@@ -8,6 +8,9 @@ if [ ! -f /var/www/html/database/database.sqlite ]; then
     touch /var/www/html/database/database.sqlite
 fi
 
+echo "Contenido de /var/www/html/database antes de migraciones:"
+ls -l /var/www/html/database
+
 # Crear archivo .env mínimo si no existe
 if [ ! -f /var/www/html/.env ]; then
     echo "APP_ENV=development" > /var/www/html/.env
