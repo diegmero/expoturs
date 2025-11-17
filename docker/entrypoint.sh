@@ -3,6 +3,11 @@ echo "APP_ENV=$APP_ENV"
 env | grep APP_
 set -e
 
+if [ ! -f /var/www/html/database/database.sqlite ]; then
+    echo "Creando archivo SQLite vacío..."
+    touch /var/www/html/database/database.sqlite
+fi
+
 # Verificar si estamos en producción
 if [ "$APP_ENV" = "production" ]; then
     echo "Running in production environment. Running migrations without seeding..."
