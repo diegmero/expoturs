@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: expoturs-app
+    container_name: expoturs-app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - expotur-storage:/var/www/html/storage
+
+volumes:
+  expotur-storage:
