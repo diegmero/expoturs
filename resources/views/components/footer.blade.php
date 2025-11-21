@@ -51,7 +51,7 @@
                         <p class="text-white text-sm sm:text-base lg:text-lg xl:text-xl font-medium">
                             {{ __('messages.footer.contact_us') }} | 
                             <a href="mailto:info@expotur.com" class="hover:text-blue-300 transition-colors">info@expotur.com</a> | 
-                            <a href="https://wa.me/50670182132" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors">+506 7018-2132</a>
+                            <a href="https://wa.me/50670181058" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors">+506 7018-1058</a>
                         </p>
                     </div>
                     
