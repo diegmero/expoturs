@@ -7,7 +7,7 @@
 
     <!-- Hero con Navegación Flotante -->
     @include('components.hero-navigation', [
-        'heroImage' => 'https://res.cloudinary.com/dspoaxmvn/image/upload/v1762109289/header_Expotur_zwgumw.webp',
+        'heroImage' => 'https://res.cloudinary.com/dspoaxmvn/image/upload/v1763693960/Web_Site-Expotur2026_20251030_mmce79.png',
         'heroTitle' => '',
         'heroSubtitle' => '',
         'showEventInfo' => false,

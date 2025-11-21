@@ -28,6 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Expotur')
+            ->favicon('https://res.cloudinary.com/dspoaxmvn/image/upload/v1762999768/favicon_tkz8q9.png')
             ->colors([
                 'primary' => Color::Teal,
             ])
